@@ -1,0 +1,2 @@
+# vpprm6_frontend
+Verkkopalveluprojektin verkkokauppaharjoittelu
