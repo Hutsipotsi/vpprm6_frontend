@@ -22,3 +22,8 @@ nav {
   margin-left: auto;
   margin-right: auto;
 }
+
+footer {
+  background-color: rgb(253, 157, 2);
+  height: 100px;
+}
