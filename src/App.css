@@ -1,6 +1,6 @@
 nav {
   height: 200px;
-  background-color: rgb(253, 157, 2);
+  background-color: rgb(250, 163, 24);
 
 }
 
@@ -19,12 +19,20 @@ nav {
 }
 
 #searchbar {
-  width: 98%;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 footer {
-  background-color: rgb(253, 157, 2);
+  background-color: rgb(250, 163, 24);
   height: 100px;
+}
+#text {
+  color: rgb(70, 68, 68);
+}
+
+#navbarDropdown {
+  color: rgb(70, 68, 68);
 }
