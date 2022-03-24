@@ -1,7 +1,12 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
 nav {
   height: 200px;
   background-color: rgb(250, 163, 24);
-
+  font-size: 23px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .products-display {
