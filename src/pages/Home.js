@@ -1,5 +1,6 @@
 import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
+import Carousel from 'react-bootstrap/Carousel';
+import firsbeegolf from '../firsbeegolf.jpg';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
     <Carousel.Item>
       <img
         className="d-block w-100"
-        src="/images/firsbeegolf.jpg"
+        img src={firsbeegolf}
         alt="First slide"
       />
       <Carousel.Caption>
