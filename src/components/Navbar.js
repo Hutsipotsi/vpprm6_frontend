@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'; //For Routing: <Link></Link> instead of
 
 export default function Navbar() {
   return (
+
     <nav className="navbar navbar-expand-lg navbar-dark">
 
       <Link className="navbar-brand" id='text' to="/">Kiekkokulma</Link>
@@ -25,7 +26,9 @@ export default function Navbar() {
               <a className="dropdown-item" href="#">Korit</a>
             </div>
           </li>
-          <li className="nav-item">
+          </ul>
+          <ul>
+          <li className="nav-item navbar-right">
             <a className="nav-link"  id='text'  href="#">Kirjaudu sisään</a>
           </li>
           <form className="form-inline my-2 my-lg-0">

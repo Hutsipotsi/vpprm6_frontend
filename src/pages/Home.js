@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import firsbeegolf from '../images/firsbeegolf.jpg';
+
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
     <Carousel.Item>
       <img
         className="d-block w-100"
-        img src={firsbeegolf}
+        img src={require('../images/firsbeegolf.jpg')}
         alt="First slide"
       />
       <Carousel.Caption>
@@ -21,7 +21,7 @@ export default function Home() {
     <Carousel.Item>
       <img
         className="d-block w-100"
-        src=""
+        img src={require('../images/puppyfrisbee.jpg')}
         alt="Second slide"
       />
   
@@ -33,7 +33,7 @@ export default function Home() {
     <Carousel.Item>
       <img
         className="d-block w-100"
-        src=""
+        img src={require('../images/disc-golf.jpg')}
         alt="Third slide"
       />
   

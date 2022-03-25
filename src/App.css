@@ -23,13 +23,16 @@ nav {
   background-color: silver;
 }
 
+.navbar-left 
+
 #searchbar {
   width: 500px;
   left: 50px;
   padding: 5px;
   
-
 }
+
+
 
 footer {
   background-color: rgb(250, 163, 24);
