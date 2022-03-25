@@ -1,6 +1,6 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import firsbeegolf from '../firsbeegolf.jpg';
+import firsbeegolf from '../images/firsbeegolf.jpg';
 
 export default function Home() {
   return (
