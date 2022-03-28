@@ -52,10 +52,12 @@ export default function Navbar() {
           </li>
         </ul>
         <ul>
-          <li className="nav-item navbar-right">
+          <li className=" nav navbar-nav ml-auto w-100 justify-content-end">
+          
             <Link className="nav-link" id="text" to="/login">
               Kirjaudu sisään
             </Link>
+            <button id='icon'><i className="bi bi-cart2"></i></button>
           </li>
           <form className="form-inline my-2 my-lg-0">
             <input

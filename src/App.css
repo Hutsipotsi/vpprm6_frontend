@@ -33,7 +33,7 @@ nav {
 
 footer {
   background-color: rgb(250, 163, 24);
-  height: 100px;
+  height: 100%;
 }
 #text {
   color: rgb(70, 68, 68);
@@ -57,4 +57,14 @@ li {
 }
 #submitButton {
   margin: 5px;
+}
+table {
+  display: flex;
+  margin: 10px;
+  margin-right: auto;
+  color: rgb(70, 68, 68);
+}
+#icon {
+  border-style: none;
+  background-color: rgb(250, 163, 24);
 }
