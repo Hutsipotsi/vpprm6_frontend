@@ -1,14 +1,35 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 
-export default function Products() {
+
+export default function Products({url}) {
+  const [categoryName, setCategoryName] = useState('');
+  const [products, setProducts] = useState([]);
+
+  let params = useParams();
+
+  useEffect(() => {
+    axios.get(url + 'products/getproducts.php/' + params.prodcategory)
+    .then((response) => {
+      const json = response.data;
+      setCategoryName(json.category);
+      setProducts(json.products);
+    }).catch(error => {
+      alert(error.response === undefined ? error : error.response.data.error);
+    })
+  }, [params])
+
   return (
     <>
       <div>
-        This is where we will put productsearch or something (this is the same
-        for all product routes)
+        <h3>Category {categoryName}</h3>
+        {products.map(product => (
+          <div key={product.id}>
+            {product.name}
+            </div>
+        ))}
       </div>
-      <Outlet />
     </>
-  );
+  )
 }

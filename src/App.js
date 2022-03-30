@@ -18,7 +18,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="products" element={<Products />}>
+          <Route path="/products/:prodcategory" element={<Products url={URL} />}>
             <Route path="discs" element={<Discs />} />
             <Route path="bags" element={<Bags />} />
             <Route path="baskets" element={<Baskets />} />
