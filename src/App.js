@@ -10,6 +10,8 @@ import Bags from "./components/Bags";
 import Baskets from "./components/Baskets";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+const URL = 'http://localhost/vpprm6_backend/';
+
 function App() {
   return (
     <Router>
