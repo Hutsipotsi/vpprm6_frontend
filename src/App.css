@@ -1,10 +1,21 @@
+:root { /* Color palette?*/
+
+  --orange-web: #faa318;
+  --raisin-black: #272838;
+  --rhythm: #7e7f9a;
+  --cultured: #f9f8f8;
+  --light-pink: #ffa5ab;
+}
+
+
 body {
   font-family: 'Nunito', sans-serif;
+  background-color: #f9f8f8;
 }
 
 nav {
   height: 200px;
-  background-color: rgb(250, 163, 24);
+  background-color: var(--orange-web);
   font-family: 'Nunito', sans-serif;
 }
 
@@ -19,7 +30,7 @@ nav {
   height: 200px;
   width: 31%;
   margin: 1%;
-  background-color: silver;
+  background-color: var(--rhythm);
 }
 
 .navbar-left 
@@ -32,18 +43,24 @@ nav {
 }
 
 footer {
-  background-color: rgb(250, 163, 24);
+  background-color: var(--light-pink);
   height: 100%;
 }
 #text {
-  color: rgb(70, 68, 68);
+  color: var(--raisin-black);
   font-size: 23px;
 }
 
 #navbarDropdown {
-  color: rgb(70, 68, 68);
+  color: var(--raisin-black);
   font-size: 23px;
 }
+
+.dropdown-item:hover {
+  color: var(--cultured);
+  background-color: var(--rhythm);
+}
+
 
 .carousel {
   padding: 10px;
@@ -62,9 +79,9 @@ table {
   display: flex;
   margin: 10px;
   margin-right: auto;
-  color: rgb(70, 68, 68);
+  color: var(--raisin-black);
 }
 #icon {
   border-style: none;
-  background-color: rgb(250, 163, 24);
+  background-color: var(--orange-web);
 }

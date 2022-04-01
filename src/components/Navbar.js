@@ -48,17 +48,6 @@ export default function Navbar({ url }) {
                 </li>
               ))}
             </ul>
-            {/* <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" id="text" to="/category/discs">
-                  Kiekot
-                </Link>
-                <Link className="dropdown-item" id="text" to="/category/bags">
-                  Reput
-                </Link>
-                <Link className="dropdown-item" id="text" to="/category/baskets">
-                  Korit
-                </Link>
-              </div> */}
           </li>
         </ul>
         <ul>
