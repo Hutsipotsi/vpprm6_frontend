@@ -39,13 +39,13 @@ export default function Navbar() {
               Tuoteryhmät
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <Link className="dropdown-item" id="text" to="/products/discs">
+              <Link className="dropdown-item" id="text" to="/category/discs">
                 Kiekot
               </Link>
-              <Link className="dropdown-item" id="text" to="/products/bags">
+              <Link className="dropdown-item" id="text" to="/category/bags">
                 Reput
               </Link>
-              <Link className="dropdown-item" id="text" to="/products/baskets">
+              <Link className="dropdown-item" id="text" to="/category/baskets">
                 Korit
               </Link>
             </div>
