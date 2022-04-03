@@ -14,7 +14,6 @@ body {
 }
 
 nav {
-  height: 200px;
   background-color: var(--orange-web);
   font-family: 'Nunito', sans-serif;
 }
@@ -33,6 +32,14 @@ nav {
   background-color: var(--rhythm);
 }
 
+#productsdiv {
+  min-height: 80vh;
+}
+
+#loginform {
+  min-height: 72vh;
+}
+
 .navbar-left 
 
 #searchbar {
@@ -43,12 +50,19 @@ nav {
 }
 
 footer {
+  position: relative;
   background-color: var(--light-pink);
   height: 100%;
 }
 #text {
   color: var(--raisin-black);
   font-size: 23px;
+}
+#icon {
+  text-decoration: none;
+  color: var(--raisin-black);
+  font-size: 23px;
+  font-family: 'Nunito', sans-serif;
 }
 
 #navbarDropdown {

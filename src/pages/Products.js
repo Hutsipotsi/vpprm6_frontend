@@ -1,35 +1,34 @@
-import axios from 'axios';
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-
-export default function Products({url}) {
-  const [categoryName, setCategoryName] = useState('');
+export default function Products({ url }) {
+  const [categoryName, setCategoryName] = useState("");
   const [products, setProducts] = useState([]);
 
   let params = useParams();
 
   useEffect(() => {
-    axios.get(url + 'products/getproducts.php/' + params.prodcategory)
-    .then((response) => {
-      const json = response.data;
-      setCategoryName(json.productgroup);
-      setProducts(json.products);
-    }).catch(error => {
-      alert(error.response === undefined ? error : error.response.data.error);
-    })
-  }, [params])
+    axios
+      .get(url + "products/getproducts.php/" + params.prodcategory)
+      .then((response) => {
+        const json = response.data;
+        setCategoryName(json.productgroup);
+        setProducts(json.products);
+      })
+      .catch((error) => {
+        alert(error.response === undefined ? error : error.response.data.error);
+      });
+  }, [params]);
 
   return (
     <>
-      <div>
+      <div id="productsdiv">
         <h3>{categoryName}</h3>
-        {products.map(product => (
-          <div key={product.id}>
-            {product.name}
-            </div>
+        {products.map((product) => (
+          <div key={product.id}>{product.name}</div>
         ))}
       </div>
     </>
-  )
+  );
 }

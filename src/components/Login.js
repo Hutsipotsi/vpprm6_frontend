@@ -2,7 +2,7 @@ import React from "react";
 
 const Login = () => {
   return (
-    <form>
+    <form id="loginform">
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input
@@ -31,7 +31,7 @@ const Login = () => {
           Check me out
         </label>
       </div>
-      <button type="submit" id='submitButton'class="btn btn-secondary">
+      <button type="submit" id="submitButton" class="btn btn-secondary">
         Submit
       </button>
     </form>
