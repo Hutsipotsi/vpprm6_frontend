@@ -58,11 +58,18 @@ footer {
   color: var(--raisin-black);
   font-size: 23px;
 }
-#icon {
+#icon{
   text-decoration: none;
   color: var(--raisin-black);
-  font-size: 23px;
+  font-size: 18px;
   font-family: 'Nunito', sans-serif;
+  padding: 5px;
+  
+  
+}
+.bi{
+ margin: 5px;
+  
 }
 
 #navbarDropdown {

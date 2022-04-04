@@ -70,16 +70,17 @@ export default function Navbar({ url, cart}) {
           </li>
         </ul>
         <ul>
-          <li className=" nav navbar-nav ml-auto w-100 justify-content-start">
-            <Link className="nav-link" id="text" to="/login">
+          <li className="navbar-nav">
+            <Link className="nav-link" id="icon" to="/login">
               Kirjaudu sisään
             </Link>
-            Ostoskori
-            <ul className="navba-nav ml-auto">
+            <i className="navba-nav" id="icon">
               <li className="nav-item">
+                Ostoskori
                 <Cart cart={cart} />
+                
               </li>
-            </ul>
+            </i>
           </li>
           <form className="form-inline my-2 my-lg-0">
             <input
