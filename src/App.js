@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Order from "./components/Order";
 
 const URL = 'http://localhost/vpprm6_backend/';
 
@@ -32,8 +33,8 @@ function addToCart(product) {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart}/>}>
-          </Route>
+          <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart}/>}/>
+          <Route path="/order" element={<Order cart={cart}/>}/>
           <Route path="login" element={<Login />} />
         </Routes>
       </div>

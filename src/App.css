@@ -95,7 +95,7 @@ table {
   margin-right: auto;
   color: var(--raisin-black);
 }
-#icon {
-  border-style: none;
-  background-color: var(--orange-web);
+
+#addCart {
+ margin: 5px;
 }
