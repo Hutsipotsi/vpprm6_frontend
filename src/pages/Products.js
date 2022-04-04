@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-export default function Products({ url }) {
+export default function Products({ url, addToCart }) {
   const [categoryName, setCategoryName] = useState("");
   const [products, setProducts] = useState([]);
 
@@ -26,7 +26,9 @@ export default function Products({ url }) {
       <div id="productsdiv">
         <h3>{categoryName}</h3>
         {products.map((product) => (
-          <div key={product.id}>{product.name}</div>
+          <div key={product.id}>{product.name}
+          <button className='btn btn-secondary' type='button' onClick={e => addToCart(product)}>Add to cart</button>
+          </div>
         ))}
       </div>
     </>

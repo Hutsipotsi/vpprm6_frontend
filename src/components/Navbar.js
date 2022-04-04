@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; //For Routing: <Link></Link> instead of <a></a>, to="" instead of href=""
+import Cart from '../components/Cart';
 
-export default function Navbar({ url }) {
+export default function Navbar({ url, cart}) {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -73,11 +74,12 @@ export default function Navbar({ url }) {
             <Link className="nav-link" id="text" to="/login">
               Kirjaudu sisään
             </Link>
-            <button id="icon">
-              <i id="icon" className="bi bi-cart2">
-                Ostoskori
-              </i>
-            </button>
+            Ostoskori
+            <ul className="navba-nav ml-auto">
+              <li className="nav-item">
+                <Cart cart={cart} />
+              </li>
+            </ul>
           </li>
           <form className="form-inline my-2 my-lg-0">
             <input

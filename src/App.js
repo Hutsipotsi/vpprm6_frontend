@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 // import Header from './components/Header';
@@ -10,6 +11,20 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const URL = 'http://localhost/vpprm6_backend/';
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    if('cart' in localStorage) {
+      setCart(JSON.parse(localStorage.getItem('cart')));
+    }
+  }, [])
+
+function addToCart(product) {
+  const newCart = [...cart,product];
+  setCart(newCart);
+  localStorage.setItem('cart', JSON.stringify(newCart));
+}
+
   return (
     <Router>
       {/*<Header /> Header if needed */}
@@ -17,7 +32,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products/:prodcategory" element={<Products url={URL} />}>
+          <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart}/>}>
           </Route>
           <Route path="login" element={<Login />} />
         </Routes>
