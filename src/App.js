@@ -29,7 +29,7 @@ function addToCart(product) {
   return (
     <Router>
       {/*<Header /> Header if needed */}
-      <Navbar url={URL}/>
+      <Navbar url={URL} cart={cart}/>
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
