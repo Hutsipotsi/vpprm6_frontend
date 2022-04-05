@@ -76,7 +76,7 @@ export default function Navbar({ url, cart}) {
             </Link>
             <i className="navba-nav" id="icon">
               <li className="nav-item">
-                Ostoskori
+              
                 <Cart cart={cart} />
                 
               </li>
@@ -90,12 +90,6 @@ export default function Navbar({ url, cart}) {
               placeholder="Search"
               aria-label="Search"
             />
-            <button
-              className="btn btn-outline-secondary my-2 my-sm-0"
-              type="submit"
-            >
-              Search
-            </button>
           </form>
         </ul>
       </div>
