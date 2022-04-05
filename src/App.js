@@ -26,6 +26,12 @@ function addToCart(product) {
   localStorage.setItem('cart', JSON.stringify(newCart));
 }
 
+function removeFromCart(product) {
+  const itemsWithoutRemoved = cart.filter(item => item.id !== product.id);
+  setCart(itemsWithoutRemoved);
+  localStorage.setItem('cart', JSON.stringify(itemsWithoutRemoved));
+}
+
   return (
     <Router>
       {/*<Header /> Header if needed */}
@@ -34,7 +40,7 @@ function addToCart(product) {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart}/>}/>
-          <Route path="/order" element={<Order cart={cart}/>}/>
+          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart}/>} />
           <Route path="login" element={<Login />} />
         </Routes>
       </div>
