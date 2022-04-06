@@ -1,10 +1,9 @@
 :root { /* Color palette?*/
 
-  --orange-web: #faa318;
+  --yellow-web: #f5f536;
   --raisin-black: #272838;
   --rhythm: #7e7f9a;
   --cultured: #f9f8f8;
-  --light-pink: #ffa5ab;
 }
 
 
@@ -14,7 +13,7 @@ body {
 }
 
 nav {
-  background-color: var(--orange-web);
+  background-color: var(--yellow-web);
   font-family: 'Nunito', sans-serif;
 }
 
@@ -51,8 +50,9 @@ nav {
 
 footer {
   position: relative;
-  background-color: var(--light-pink);
-  height: 100%;
+  bottom: 0;
+  background-color: var(--yellow-web);
+  
 }
 #text {
   color: var(--raisin-black);
@@ -70,6 +70,10 @@ footer {
 .bi{
  margin-left: 20px;
   
+}
+
+.nav-item a {
+  text-decoration: none;
 }
 
 #navbarDropdown {

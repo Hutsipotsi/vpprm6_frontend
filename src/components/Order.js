@@ -7,7 +7,7 @@ export default function Order({cart, removeFromCart}) {
 
     return (
         <div>
-            <h3 className="header">Items in cart</h3>
+            <h3 className="header">Ostoskori</h3>
             <table className="table">
                 <tbody>
                     {cart.map(product => {
