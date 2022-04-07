@@ -57,7 +57,7 @@ function removeFromCart(product) {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart}/>}/>
-          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart}/>} />
+          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount}/>} />
           <Route path="login" element={<Login />} />
         </Routes>
       </div>
