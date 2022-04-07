@@ -1,9 +1,10 @@
 :root { /* Color palette?*/
 
   --yellow-web: #f5f536;
-  --raisin-black: #272838;
-  --rhythm: #7e7f9a;
+  --english-violet: #443850;
+  --roman-silver: #7D8491;
   --cultured: #f9f8f8;
+  --silver-sand: #C0C5C1;
 }
 
 
@@ -28,7 +29,7 @@ nav {
   height: 200px;
   width: 31%;
   margin: 1%;
-  background-color: var(--rhythm);
+  background-color: var(--roman-silver);
 }
 
 #productsdiv {
@@ -51,7 +52,7 @@ nav {
 footer {
   position: relative;
   bottom: 0;
-  background-color: var(--yellow-web);
+  background-color: var(--silver-sand);
   
 }
 #text {
@@ -83,7 +84,7 @@ footer {
 
 .dropdown-item:hover {
   color: var(--cultured);
-  background-color: var(--rhythm);
+  background-color: var(--roman-silver);
 }
 
 
