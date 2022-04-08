@@ -1,20 +1,25 @@
-:root { /* Color palette?*/
+:root {
+  /*
+    Name variables by their use: background-light, text-dark, etc.
+    -> Thus no need to change them throughout the document every time a color changes
+  */
 
-  --yellow-web: #f5f536;
-  --english-violet: #443850;
-  --roman-silver: #7D8491;
-  --cultured: #f9f8f8;
-  --silver-sand: #C0C5C1;
+  --main: #f5f536;
+  --text-dark: #443850;
+  --text-light: #f9f8f8;
+  --background-light: #f9f8f8;
+  --background-darker: #C0C5C1;
+  --background-even-darker: #7D8491;
 }
 
 
 body {
   font-family: 'Nunito', sans-serif;
-  background-color: #f9f8f8;
+  background-color: var(--background-light);
 }
 
 nav {
-  background-color: var(--yellow-web);
+  background-color: var(--main);
   font-family: 'Nunito', sans-serif;
 }
 
@@ -29,7 +34,7 @@ nav {
   height: 200px;
   width: 31%;
   margin: 1%;
-  background-color: var(--roman-silver);
+  background-color: var(--background-even-darker);
 }
 
 #productsdiv {
@@ -52,22 +57,22 @@ nav {
 footer {
   position: relative;
   bottom: 0;
-  background-color: var(--silver-sand);
+  background-color: var(--background-darker);
   
 }
 #text {
-  color: var(--raisin-black);
+  color: var(--text-dark);
   font-size: 23px;
 }
 #icon{
   text-decoration: none;
-  color: var(--raisin-black);
+  color: var(--text-dark);
   font-size: 18px;
   font-family: 'Nunito', sans-serif;
   padding: 5px;
   
-  
 }
+
 .bi{
  margin-left: 20px;
   
@@ -78,15 +83,14 @@ footer {
 }
 
 #navbarDropdown {
-  color: var(--raisin-black);
+  color: var(--text-dark);
   font-size: 23px;
 }
 
 .dropdown-item:hover {
-  color: var(--cultured);
-  background-color: var(--roman-silver);
+  color: var(--text-light);
+  background-color: var(--background-even-darker);
 }
-
 
 .carousel {
   padding: 10px;
@@ -105,7 +109,7 @@ table {
   display: flex;
   margin: 10px;
   margin-right: auto;
-  color: var(--raisin-black);
+  color: var(--text-black);
 }
 
 #addCart {
