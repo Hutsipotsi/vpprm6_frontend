@@ -1,5 +1,9 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import Card from 'react-bootstrap/Card'
+import CardGroup from 'react-bootstrap/CardGroup'
+import Button from 'react-bootstrap/Button'
+import CloseButton from 'react-bootstrap/CloseButton'
 
 export default function Home() {
   return (
@@ -47,14 +51,68 @@ export default function Home() {
         </Carousel.Item>
       </Carousel>
 
-      <section class="product-display">
-        <div class="product-thumbnail"></div>
-        <div class="product-thumbnail"></div>
-        <div class="product-thumbnail"></div>
-        <div class="product-thumbnail"></div>
-        <div class="product-thumbnail"></div>
-        <div class="product-thumbnail"></div>
-      </section>
+
+      <CardGroup>
+      <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={require("../images/westside-discs_bt-origio_pohjan-poika.jpg")} alt="PlaceHolderPicture" />
+          <Card.Body>
+            <Card.Title>Kiekko Pohjanpoika</Card.Title>
+            <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary" id='goToProducts' type='button' href='products/1/'>Kiekot</Button>
+          </Card.Body>
+        </Card>
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={require("../images/backpack.png")} alt="PlaceHolderPicture" />
+          <Card.Body>
+            <Card.Title>Kiekko reppu</Card.Title>
+            <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary" id='goToProducts' type='button' href='products/3/'>Reput</Button>
+          </Card.Body>
+        </Card>
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={require("../images/disc-golf.jpg")} alt="PlaceHolderPicture" />
+          <Card.Body>
+            <Card.Title>Kori Target</Card.Title>
+            <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary" id='goToProducts' type='button' href='products/2/'>Korit</Button>
+          </Card.Body>
+        </Card>
+      </CardGroup>
+
+      <CardGroup>
+      <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={require("../images/disc-golf-bag.jpg")} alt="PlaceHolderPicture" />
+          <Card.Body>
+            <Card.Title>Kiekko kassi</Card.Title>
+            <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary" id='goToProducts' type='button' href='products/3/'>Reput</Button>
+          </Card.Body>
+        </Card>
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={require("../images/innova_champion_krait.jpg")} alt="PlaceHolderPicture" />
+          <Card.Body>
+            <Card.Title>Kiekko Krait</Card.Title>
+            <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary" id='goToProducts' type='button' href='products/1/'>Kiekot</Button>
+          </Card.Body>
+        </Card>
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={require("../images/disc-golf2.jpg")} alt="PlaceHolderPicture" />
+          <Card.Body>
+            <Card.Title>Kori Traveler</Card.Title>
+            <Card.Text>Some quick example text to build on the card title and make up the bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary" id='goToProducts' type='button' href='products/2/'>Korit</Button>
+          </Card.Body>
+        </Card>
+      </CardGroup>
+
     </div>
+
   );
 }
