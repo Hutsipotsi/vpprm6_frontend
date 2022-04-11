@@ -4,25 +4,25 @@ import { createref } from 'react/cjs/react.production.min';
 
 
 
-export default function Order({cart, removeFromCart, updateAmount}) {
-    const [inputs,_] = useState([]);
+export default function Order({ cart, removeFromCart, updateAmount }) {
+    const [inputs, _] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
 
     useEffect(() => {
-        for(let i = 0; i < cart.length; i++) {
+        for (let i = 0; i < cart.length; i++) {
             inputs[i] = React.createRef();
         }
-        
+
     }, [cart.length])
 
     useEffect(() => {
-        if(inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !==null){
-          inputs[inputIndex].current.focus();
+        if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
+            inputs[inputIndex].current.focus();
         }
-      }, [cart])
+    }, [cart])
 
-      function changeAmount(e,product,index) {
-        updateAmount(e.target.value,product);
+    function changeAmount(e, product, index) {
+        updateAmount(e.target.value, product);
         setInputIndex(index);
     }
 
@@ -34,13 +34,13 @@ export default function Order({cart, removeFromCart, updateAmount}) {
             <table className="table">
                 <tbody>
                     {cart.map((product, index) => {
-                        sum+=parseFloat(product.price);
+                        sum+=parseFloat(product.price)*product.amount;
                         return (
                             <tr key={uuid()}>
                                 <td>{product.name}</td>
                                 <td>{product.price} €</td>
                                 <td>
-                                   <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)}/>
+                                    <input ref={inputs[index]} style={{ width: '60px' }} value={product.amount} onChange={e => changeAmount(e, product, index)} />
                                 </td>
                                 <td><a href="#" onClick={() => removeFromCart(product)}>Delete</a></td>
                             </tr>
