@@ -6,6 +6,7 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Button from 'react-bootstrap/Button'
 import CloseButton from 'react-bootstrap/CloseButton'
 import { Col, Row } from "react-bootstrap";
+import DiscSearch from "../components/DiscSearch";
 
             
 
@@ -31,6 +32,9 @@ export default function Products({ url, addToCart }) {
   return (
     <>
       <h3>{categoryName}</h3>
+
+      <DiscSearch prodcat={params.prodcategory}/>
+
       <container>
         <Row>
           {products.map((product) => (
