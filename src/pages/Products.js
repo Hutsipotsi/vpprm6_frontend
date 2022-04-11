@@ -12,6 +12,7 @@ import { Col, Row } from "react-bootstrap";
 export default function Products({ url, addToCart }) {
   const [categoryName, setCategoryName] = useState("");
   const [products, setProducts] = useState([]);
+  const [discproperty, setDiscproperty] = useState([]);
 
   let params = useParams();
 
@@ -22,6 +23,7 @@ export default function Products({ url, addToCart }) {
         const json = response.data;
         setCategoryName(json.productgroup);
         setProducts(json.products);
+        setDiscproperty(json.discproperty);
       })
       .catch((error) => {
         alert(error.response === undefined ? error : error.response.data.error);
@@ -35,7 +37,7 @@ export default function Products({ url, addToCart }) {
         <Row>
           {products.map((product) => (
             <Col>
-              <Card border="warning" style={{ width: '18rem' }}>
+              <Card border="warning" style={{ width: '16rem' }}>
                 <Card.Body>
                   <div key={product.id}>
                     <a href={url + 'images/' + product.image}><Card.Img variant="top" src={url + 'images/' + product.image} alt="tuotekuva" /></a>
