@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="container-fluid py-1 mt-auto">
             <div className="d-flex justify-content-center">
                 <p className="m-0 fw-bold text-white text-center"></p>
-                    <table>
+                    <table id="footerText">
                      <tr>
                       <th>Yhteystiedot:</th>
                      <tr>
@@ -17,6 +17,11 @@ export default function Footer() {
                       <td>Sähköp. kiekkokulma@hotmail.com</td>
                      </tr> 
                     </table>
+                    <h5 id="footerIcons">Seuraa kiekkokulmaa:
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-twitter"></i>
+                    </h5>
             </div>
         </footer>
     );
