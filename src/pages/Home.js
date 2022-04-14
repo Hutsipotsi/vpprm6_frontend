@@ -14,11 +14,11 @@ export default function Home() {
             id="carouselImage"
             className="d-block w-100"
             img
-            src={require("../images/firsbeegolf.jpg")}
+            src={require("../images/products/innova_champion_teebird.jpg")}
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
+            <h3>Innova Champion Teebird</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -27,12 +27,12 @@ export default function Home() {
             id="carouselImage"
             className="d-block w-100"
             img
-            src={require("../images/puppyfrisbee.jpg")}
+            src={require("../images/products/innova_dx_aero.jpg")}
             alt="Second slide"
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
+            <h3>Innova DX Aero</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -41,19 +41,20 @@ export default function Home() {
             id="carouselImage"
             className="d-block w-100"
             img
-            src={require("../images/disc-golf.jpg")}
+            src={require("../images/products/innova_star_boss.jpg")}
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3>Innova Star Boss</h3>
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
+      <h3 id="saleText">Viikon tarjoukset</h3>
+    <div id="cards">
       <CardGroup>
         <Card style={{ width: "18rem" }}>
           <Card.Img
@@ -191,6 +192,7 @@ export default function Home() {
           </Card.Body>
         </Card>
       </CardGroup>
+    </div>
     </div>
   );
 }

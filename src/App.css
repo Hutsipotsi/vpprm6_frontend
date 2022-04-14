@@ -54,7 +54,8 @@ nav {
   
 }
 #carouselImage {
-  height: 50vh;
+  height: 100vh;
+  margin-left: 20px;
   
 }
 
@@ -102,6 +103,7 @@ footer {
 
 .carousel {
   padding: 10px;
+
 }
 li {
   list-style: none;
@@ -124,5 +126,14 @@ table {
  margin: 5px;
 }
 .header {
+  padding: 10px;
+}
+#cards {
+  padding: 5px;
+  margin: 5px;
+  margin-left: 20px;
+}
+#saleText {
+  margin-left: 20px;
   padding: 10px;
 }
