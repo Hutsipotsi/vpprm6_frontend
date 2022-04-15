@@ -3,7 +3,6 @@
     Name variables by their use: background-light, text-dark, etc.
     -> Thus no need to change them throughout the document every time a color changes
   */
-
   --main: #f5f536;
   --text-dark: #443850;
   --text-light: #f9f8f8;
@@ -11,7 +10,6 @@
   --background-darker: #C0C5C1;
   --background-even-darker: #7D8491;
 }
-
 
 body {
   font-family: 'Nunito', sans-serif;
@@ -53,18 +51,62 @@ nav {
   padding: 5px;
   
 }
+
+.carousel-item {
+  max-height: 600px;
+}
+
+.carousel-item img {
+  object-fit: contain;
+  max-height: 600px;
+}
+
+.carousel-item {
+  color: black;
+}
+
+.category {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/*
 #carouselImage {
-  height: 100vh;
-  margin-left: 20px;
-  
+  height: 100vh;  
+  margin-left: 20px;  
+}*/
+
+.saleProdCard {
+  padding: 5px;
+  margin-block-start: 5px;
+}
+
+*[class^="card"] {
+  padding: 5px;
+  margin-block-end: 5px;
+}
+/*
+*[class^="card.img"], card.img {
+  height: 150px;
+  width: auto;
+}*/
+
+.prodCard {
+  padding-inline-end: 5px;
+  max-height: max-content;
+}
+
+.prodMenu {
+
+  margin-bottom: 20px;
+  padding-right: 5px;
 }
 
 footer {
   position: relative;
   bottom: 0;
   background-color: var(--background-darker);
- 
 }
+
 #footerIcons {
   margin-top: 10vh;
 }
@@ -73,18 +115,17 @@ footer {
   color: var(--text-dark);
   font-size: 23px;
 }
+
 #icon{
   text-decoration: none;
   color: var(--text-dark);
   font-size: 18px;
   font-family: 'Nunito', sans-serif;
-  padding: 5px;
-  
+  padding: 5px;  
 }
 
 .bi{
- margin-left: 20px;
-  
+ margin-left: 20px;  
 }
 
 .nav-item a {
@@ -105,6 +146,7 @@ footer {
   padding: 10px;
 
 }
+
 li {
   list-style: none;
 }
@@ -112,9 +154,11 @@ li {
 .form-group{
   margin: 20px;
 }
+
 #submitButton {
   margin: 5px;
 }
+
 table {
   display: flex;
   margin: 10px;
@@ -125,14 +169,17 @@ table {
 #addCart {
  margin: 5px;
 }
+
 .header {
   padding: 10px;
 }
+
 #cards {
   padding: 5px;
   margin: 5px;
   margin-left: 20px;
 }
+
 #saleText {
   margin-left: 20px;
   padding: 10px;

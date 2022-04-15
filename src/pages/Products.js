@@ -42,21 +42,25 @@ export default function Products({ url, addToCart }) {
 
   return (
     <>
-      <h3>{categoryName}</h3>
+      <h2 className="category">{categoryName}</h2>
 
+<<<<<<< HEAD
       <DiscSearch show={showDiscSearch}/>
+=======
+      <DiscSearch class="prodMenu" prodcat={params.prodcategory}/>
+>>>>>>> 1912b8e30fb9f9d9e75dd899505ec4ff653c8b36
 
       <container>
         <Row>
           {products.map((product) => (
-            <Col>
+            <Col className="prodCard">
               <Card border="warning" style={{ width: '16rem' }}>
                 <Card.Body>
                   <div key={product.id}>
                     <a href={url + 'images/' + product.image}><Card.Img variant="top" src={url + 'images/' + product.image} alt="tuotekuva" /></a>
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Subtitle className="mb-3">{product.price} €</Card.Subtitle>
-                    <Card.Text>
+                    <Card.Text> 
                       Some quick example text to build on the card title and make up the bulk of
                       the card's content.
                     </Card.Text>

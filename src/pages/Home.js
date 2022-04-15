@@ -8,43 +8,38 @@ import CloseButton from "react-bootstrap/CloseButton";
 export default function Home() {
   return (
     <div>
-      <Carousel>
+      <Carousel variant="dark">
         <Carousel.Item>
           <img
-            id="carouselImage"
             className="d-block w-100"
             img
-            src={require("../images/products/innova_champion_teebird.jpg")}
+            src={require("../images/backpack.png")}
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>Innova Champion Teebird</h3>
+            <h3>Reppu</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            id="carouselImage"
             className="d-block w-100"
             img
-            src={require("../images/products/innova_dx_aero.jpg")}
+            src={require("../images/disc-golf.jpg")}
             alt="Second slide"
           />
-
           <Carousel.Caption>
-            <h3>Innova DX Aero</h3>
+            <h3>Kori Target</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            id="carouselImage"
             className="d-block w-100"
             img
             src={require("../images/products/innova_star_boss.jpg")}
             alt="Third slide"
           />
-
           <Carousel.Caption>
             <h3>Innova Star Boss</h3>
             <p>
@@ -56,7 +51,7 @@ export default function Home() {
       <h3 id="saleText">Viikon tarjoukset</h3>
     <div id="cards">
       <CardGroup>
-        <Card style={{ width: "18rem" }}>
+        <Card border="warning" style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
             src={require("../images/westside-discs_bt-origio_pohjan-poika.jpg")}
@@ -78,7 +73,7 @@ export default function Home() {
             </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: "18rem" }}>
+        <Card border="warning" style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
             src={require("../images/backpack.png")}
@@ -100,7 +95,7 @@ export default function Home() {
             </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: "18rem" }}>
+        <Card border="warning" style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
             src={require("../images/disc-golf.jpg")}
@@ -124,8 +119,8 @@ export default function Home() {
         </Card>
       </CardGroup>
 
-      <CardGroup>
-        <Card style={{ width: "18rem" }}>
+      <CardGroup className="saleProdCard">
+        <Card border="warning" style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
             src={require("../images/disc-golf-bag.jpg")}
@@ -147,7 +142,7 @@ export default function Home() {
             </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: "18rem" }}>
+        <Card border="warning" style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
             src={require("../images/innova_champion_krait.jpg")}
@@ -169,7 +164,7 @@ export default function Home() {
             </Button>
           </Card.Body>
         </Card>
-        <Card style={{ width: "18rem" }}>
+        <Card border="warning" style={{ width: "18rem" }}>
           <Card.Img
             variant="top"
             src={require("../images/disc-golf2.jpg")}
