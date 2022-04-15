@@ -8,8 +8,6 @@ import CloseButton from 'react-bootstrap/CloseButton'
 import { Col, Row } from "react-bootstrap";
 import DiscSearch from "../components/DiscSearch";
 
-            
-
 export default function Products({ url, addToCart }) {
   const [categoryName, setCategoryName] = useState("");
   const [products, setProducts] = useState([]);
@@ -18,8 +16,15 @@ export default function Products({ url, addToCart }) {
   let params = useParams();
 
   useEffect(() => {
-    axios
-      .get(url + "products/getproducts.php/" + params.prodcategory)
+    let address = '';
+
+    if(params.discSearchParams === undefined) {
+      address = url + "products/getproducts.php/" + params.prodcategory;
+    }
+    else {
+      address = url + "products/getproducts.php/" + params.prodcategory;
+    }
+    axios.get(address)
       .then((response) => {
         const json = response.data;
         setCategoryName(json.productgroup);
