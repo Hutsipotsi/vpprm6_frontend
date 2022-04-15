@@ -7,6 +7,13 @@ export default function DiscSearch({ show }) {
     const [vakaus, setVakaus] = useState(null);
     const [feidi, setFeidi] = useState(null);
 
+    function resetOptions() {
+        setNopeus(null);
+        setLiito(null);
+        setVakaus(null);
+        setFeidi(null);
+    }
+
     function dropdownOptions(name, startValue, endValue) {
         let options = [];
         let i = 0;
@@ -41,11 +48,12 @@ export default function DiscSearch({ show }) {
                 <select name="feidi" id="feidi" onChange={ e => setFeidi(e.target.value) }>
                     {dropdownOptions("Liito", 0, 5)}
                 </select>
-                <Link className="btn btn-secondary"
+                <Link className="btn btn-primary"
                 to={"/products/" + nopeus
                 + "/" + liito +
                 "/" + vakaus +
                 "/" + feidi}>Hae</Link>
+                <button className="btn btn-secondary" onClick={() => resetOptions()}>Tyhjennä</button>
             </form>
         );
     }
