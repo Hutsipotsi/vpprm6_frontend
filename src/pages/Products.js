@@ -44,11 +44,7 @@ export default function Products({ url, addToCart }) {
     <>
       <h2 className="category">{categoryName}</h2>
 
-<<<<<<< HEAD
       <DiscSearch show={showDiscSearch}/>
-=======
-      <DiscSearch class="prodMenu" prodcat={params.prodcategory}/>
->>>>>>> 1912b8e30fb9f9d9e75dd899505ec4ff653c8b36
 
       <container>
         <Row>
