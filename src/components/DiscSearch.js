@@ -2,47 +2,48 @@ import React from "react";
 
 export default function DiscSearch({ prodcat }) {
 
-    function optionValues(startValue, endValue) {
+    function dropdownOptions(name, startValue, endValue) {
+        let options = [];
+        let i = 0;
         let up = endValue > startValue;
-        let options = '';
         let step = 1;
         let values = endValue - startValue + 1;
         if(!up) {
             step = -1;
             values = startValue - endValue + 1;
         }
-        for(let i = 0; i <= values; i++, startValue += step) {
-            options += '<option value="' + startValue + '">' + startValue + '</option>'; 
+
+        options.push(<option key={i} value="null">{name}</option>);
+        for(i = 1; i <= values; i++, startValue += step) {
+            options.push(<option key={i} value={startValue}>{startValue}</option>);
         }
+        
         return options;
     }
 
     function renderSearch() {
         return (
-            <div>
-                <select className="form-select" aria-label="Default select example">
-                    <option defaultValue>Nopeus</option>
-                    {optionValues(1, 15)}
+            <form>
+                <select name="nopeus" id="nopeus">
+                    {dropdownOptions("Nopeus", 1, 15)}
                 </select>
-                <select className="form-select" aria-label="Default select example">
-                    <option defaultValue>Liito</option>
-                    {optionValues(1, 6)}
+                <select name="liito" id="liito">
+                    {dropdownOptions("Liito", 1, 6)}
                 </select>
-                <select className="form-select" aria-label="Default select example">
-                    <option defaultValue>Vakaus</option>
-                    {optionValues(1, -5)}
+                <select name="vakaus" id="vakaus">
+                    {dropdownOptions("Vakaus", 1, -5)}
                 </select>
-                <select className="form-select" aria-label="Default select example">
-                    <option defaultValue>Feidi</option>
-                    {optionValues(0, 5)}
+                <select name="feidi" id="feidi">
+                    {dropdownOptions("Liito", 0, 5)}
                 </select>
-            </div>
+                <button className="btn btn-primary">Hae</button>
+            </form>
         );
     }
 
     return (
         <div>
-            {prodcat == 1 ? renderSearch() : null}
+            {prodcat !== undefined && prodcat == 1 ? renderSearch() : null}
         </div>
     );
 }
