@@ -14,15 +14,19 @@ export default function Products({ url, addToCart }) {
   const [discproperty, setDiscproperty] = useState([]);
 
   let params = useParams();
+  let showDiscSearch = params.prodcategory === undefined || params.prodcategory == 1;
 
   useEffect(() => {
     let address = '';
 
-    if(params.discSearchParams === undefined) {
+    if(params.prodcategory !== undefined) {
       address = url + "products/getproducts.php/" + params.prodcategory;
     }
     else {
-      address = url + "products/getproducts.php/" + params.prodcategory;
+      address = url + "products/getdiscs.php/?nopeus=" + params.nopeus +
+      "&liito=" + params.liito +
+      "&vakaus=" + params.vakaus +
+      "&feidi=" + params.feidi;
     }
     axios.get(address)
       .then((response) => {
@@ -40,7 +44,7 @@ export default function Products({ url, addToCart }) {
     <>
       <h3>{categoryName}</h3>
 
-      <DiscSearch prodcat={params.prodcategory}/>
+      <DiscSearch show={showDiscSearch}/>
 
       <container>
         <Row>
