@@ -19,12 +19,12 @@ export default function Navbar({ url, cart}) {
   }, []);
 
   return (
-    <nav className="container-fluid navbar navbar-expand-lg navbar-dark">
+    <nav className="container-fluid navbar navbar-expand-lg navbar-light">
       <Link className="navbar-brand" id="text" to="/">
         Kiekkokulma
       </Link>
       <button
-        className="navbar-toggler"
+        className="navbar-toggler navbar-light"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -32,7 +32,7 @@ export default function Navbar({ url, cart}) {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon navbar-light"></span>
       </button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
