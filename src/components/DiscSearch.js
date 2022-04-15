@@ -46,7 +46,7 @@ export default function DiscSearch({ show }) {
                     {dropdownOptions("Vakaus", 1, -5)}
                 </select>
                 <select name="feidi" id="feidi" onChange={ e => setFeidi(e.target.value) }>
-                    {dropdownOptions("Liito", 0, 5)}
+                    {dropdownOptions("Feidi", 0, 5)}
                 </select>
                 <Link className="btn btn-primary"
                 to={"/products/" + nopeus
