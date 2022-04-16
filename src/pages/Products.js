@@ -43,10 +43,11 @@ export default function Products({ url, addToCart }) {
   return (
     <>
       <h2 className="category">{categoryName}</h2>
-
+  
       <DiscSearch show={showDiscSearch}/>
-
-      <container>
+      
+      <container> 
+      <CardGroup>
         <Row>
           {products.map((product) => (
             <Col className="prodCard">
@@ -57,17 +58,17 @@ export default function Products({ url, addToCart }) {
                     <Card.Title>{product.name}</Card.Title>
                     <Card.Subtitle className="mb-3">{product.price} €</Card.Subtitle>
                     <Card.Text> 
-                      Some quick example text to build on the card title and make up the bulk of
-                      the card's content.
+                      Some quick example text to build on the card title and make up the bulk of the card's content.
                     </Card.Text>
                     <Card.Link href={url + 'images/' + product.image}>Iso tuotekuva</Card.Link>
-                    <Button variant='btn btn-secondary' id='addCart' type='button' onClick={e => addToCart(product)}>Add to cart</Button>
+                    <Button variant='btn btn-primary' id='addCart' type='button' onClick={e => addToCart(product)}>Add to cart</Button>
                   </div>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
+        </CardGroup>
       </container>
     </>
   );
