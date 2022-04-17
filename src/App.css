@@ -195,3 +195,13 @@ table {
   margin-left: 20px;
   padding: 10px;
 }
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+h4 {
+  color: red;
+}
+#productOverline {
+  text-decoration: line-through;
+}

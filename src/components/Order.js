@@ -30,7 +30,7 @@ export default function Order({ cart, removeFromCart, updateAmount }) {
 
     return (
         <div>
-            <h3 className="header">Ostoskori</h3>
+            <h3 className="shoppingCart">Ostoskori</h3>
             <table className="table">
                 <tbody>
                     {cart.map((product, index) => {

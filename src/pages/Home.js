@@ -62,6 +62,10 @@ export default function Home() {
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
+              <h4>7.99€</h4>
+              <p>Ilman alennusta
+                <p id="productOverline">10.99€</p>
+              </p>
             </Card.Text>
             <Button
               variant="primary"
@@ -84,6 +88,10 @@ export default function Home() {
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
+              <h4>109.99€</h4>
+              <p>Ilman alennusta
+                <p id="productOverline">129.00€</p>
+              </p>
             </Card.Text>
             <Button
               variant="primary"
@@ -106,6 +114,10 @@ export default function Home() {
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
+              <h4>99.99€</h4>
+              <p>Ilman alennusta
+                <p id="productOverline">149.00€</p>
+              </p>
             </Card.Text>
             <Button
               variant="primary"
@@ -131,6 +143,10 @@ export default function Home() {
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
+              <h4>19.99€</h4>
+              <p>Ilman alennusta
+                <p id="productOverline">29.90€</p>
+              </p>
             </Card.Text>
             <Button
               variant="primary"
@@ -153,6 +169,10 @@ export default function Home() {
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
+              <h4>12.90€</h4>
+              <p>Ilman alennusta
+                <p id="productOverline">17.90€</p>
+              </p>
             </Card.Text>
             <Button
               variant="primary"
@@ -175,6 +195,10 @@ export default function Home() {
             <Card.Text>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
+              <h4>150.90€</h4>
+              <p>Ilman alennusta
+                <p id="productOverline">199.00€</p>
+              </p>
             </Card.Text>
             <Button
               variant="primary"
