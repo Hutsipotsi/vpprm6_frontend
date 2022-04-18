@@ -52,6 +52,10 @@ nav {
   
 }
 
+.carousel {
+  padding: 10px;
+}
+
 .carousel-item {
   max-height: 600px;
 }
@@ -65,6 +69,11 @@ nav {
   color: black;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
 .category {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -73,6 +82,7 @@ nav {
 .properties {
   padding: 3px;
   margin-right: 10px;
+  margin-bottom: 30px;
 }
 
 .btn-primary, .btn-secondary {
@@ -90,10 +100,10 @@ nav {
   margin-block-start: 5px;
 }
 
-*[class^="card"] {
+/*[class^="card"] {
   padding: 5px;
   margin-block-end: 5px;
-}
+}*/
 /*
 *[class^="card.img"], card.img {
   height: 150px;
@@ -101,20 +111,29 @@ nav {
 }*/
 
 .prodCard {
+  
   padding: 3px;
-  /*padding-inline-end: 5px;
-  //max-height: max-content;*/
+  max-height: 500px;
+  display: inline-table;
+}
+
+.title {
+  max-height: 30px;
+  font-size: medium;
+  text-align: justify;
+  padding-bottom: 3px;
 }
 
 .prodMenu {
-
   margin-bottom: 20px;
   padding-right: 5px;
 }
 
 footer {
+  
   position: relative;
   bottom: 0;
+  left: 0;
   background-color: var(--background-darker);
 }
 
@@ -151,11 +170,6 @@ footer {
 .dropdown-item:hover {
   color: var(--text-light);
   background-color: var(--background-even-darker);
-}
-
-.carousel {
-  padding: 10px;
-
 }
 
 li {
@@ -195,10 +209,7 @@ table {
   margin-left: 20px;
   padding: 10px;
 }
-.carousel-control-next,
-.carousel-control-prev {
-  filter: invert(100%);
-}
+
 h4 {
   color: red;
 }
