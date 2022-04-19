@@ -6,6 +6,7 @@ import Products from "./pages/Products";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
+import ManageCategories from "./pages/ManageCategories";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Order from "./components/Order";
 import { editableInputTypes } from "@testing-library/user-event/dist/utils";
@@ -60,6 +61,7 @@ function App() {
           <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart} />} />
           <Route path="/products/:nopeus/:liito/:vakaus/:feidi" element={<Products url={URL} addToCart={addToCart} />} />
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
+          <Route path="/managecategories" element={<ManageCategories url={URL} />} />
           <Route path="login" element={<Login />} />
         </Routes>
       </div>

@@ -21,6 +21,10 @@ nav {
   font-family: 'Nunito', sans-serif;
 }
 
+#managementText {
+  margin: 5px;
+}
+
 .products-display {
   width: 98%;
   margin-left: auto;

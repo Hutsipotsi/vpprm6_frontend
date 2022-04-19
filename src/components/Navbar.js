@@ -68,7 +68,12 @@ export default function Navbar({ url, cart}) {
               ))}
             </ul>
           </li>
-        </ul>
+          <li className="navbar-nav">
+            <Link className="nav-link" id="managementText" to="/managecategories">
+              Hallinta
+            </Link>
+            </li>
+        </ul>  
         <ul>
           <li className="navbar-nav">
             <Link className="nav-link" id="icon" to="/login">
