@@ -72,6 +72,9 @@ export default function Navbar({ url, cart}) {
             <Link className="nav-link" id="managementText" to="/managecategories">
               Hallinta
             </Link>
+            <Link className="nav-link" id="managementText" to="/manageproducts">
+              Tuote
+            </Link>
             </li>
         </ul>  
         <ul>
@@ -79,11 +82,12 @@ export default function Navbar({ url, cart}) {
             <Link className="nav-link" id="icon" to="/login">
               Kirjaudu sisään
             </Link>
+            <Link className="nav-link" id="icon" to="/register">
+              Rekisteröidy
+            </Link>
             <i className="navba-nav" id="icon">
               <li className="nav-item">
-              
                 <Cart cart={cart} />
-                
               </li>
             </i>
           </li>
