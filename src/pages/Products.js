@@ -50,7 +50,7 @@ export default function Products({ url, addToCart }) {
       <CardGroup>
         <Row>
           {products.map((product) => (
-            <Col className="prodCard">
+            <Col xs={1} className="prodCard">
               <Card border="warning" style={{ width: '16rem' }}>
                 <Card.Body>
                   <div key={product.id}>
