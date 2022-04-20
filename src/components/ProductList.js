@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
-export default function productList({url,selectedProduct, setSelectedProduct}) {
+export default function ProductList({url,selectedProduct, setSelectedProduct}) {
     const [products, setProducts] = useState([]);
 
 
