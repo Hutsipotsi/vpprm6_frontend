@@ -19,6 +19,13 @@ export default function Products({ url, addToCart }) {
   useEffect(() => {
     let address = '';
 
+    if(params.searchPhrase === undefined) {
+      address = url + 'products/getproducts.php/' + params.categoryId;
+
+    }else {
+      address = url + 'products/searchproducts.php/' + params.searchPhrase;
+    }
+
     if(params.prodcategory !== undefined) {
       address = url + "products/getproducts.php/" + params.prodcategory;
     }
@@ -27,10 +34,17 @@ export default function Products({ url, addToCart }) {
       "&liito=" + params.liito +
       "&vakaus=" + params.vakaus +
       "&feidi=" + params.feidi;
-    }
+    } 
     axios.get(address)
       .then((response) => {
         const json = response.data;
+        if(params.searchPhrase === undefined) {
+          setCategoryName(json.category);
+          setProducts(json.products);
+        }else {
+          setCategoryName(params.searchPhrase);
+          setProducts(json);
+        }
         setCategoryName(json.productgroup);
         setProducts(json.products);
         setDiscproperty(json.discproperty);
