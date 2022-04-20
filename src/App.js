@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ManageCategories from "./pages/ManageCategories";
-import ManageProducts from "./pages/ManageProducts";
+
+import ManageProducts from "./pages/addingproducts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Order from "./components/Order";
 import { editableInputTypes } from "@testing-library/user-event/dist/utils";
