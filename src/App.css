@@ -133,6 +133,20 @@ nav {
   padding-right: 5px;
 }
 
+.prodtable {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--text-black);
+  display: block;
+  text-align: left;
+  padding: 10px;
+}
+
+.prodtable th, td {
+  padding: 5px;
+  padding-right: 20px;
+}
+
 footer {
   position: relative;
   bottom: 0;

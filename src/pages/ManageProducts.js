@@ -2,6 +2,7 @@ import axios from "axios";
 import React, {useState, useEffect} from "react";
 import CategoryList from "../components/CategoryList";
 import uuid from "react-uuid";
+import Table from 'react-bootstrap/Table'
 
 export default function ManageProducts({url}) {
     const [selectedCategory, setSelectedCategory] = useState(null);
@@ -15,7 +16,7 @@ export default function ManageProducts({url}) {
 
     useEffect(() => {
       if (selectedCategory !== null) {
-        axios.get(url + 'products/getallproducts.php/' + selectedCategory.id)
+        axios.get(url + 'products/getproducts.php/' + selectedCategory.id)
         .then((response) => {
             const json = response.data;
             if (json) {
@@ -49,14 +50,14 @@ if (!addingProduct) {
         <>
         <h3>Hallitse tuotteita</h3>
         <CategoryList url={url} selectedCategory = {selectedCategory} setSelectedCategory={setSelectedCategory}/>
-        <table className="table">
+        <table className="prodtable">
             <thead>
                 <tr key={uuid()}>
                     <th>Nimi</th>
                     <th>Hinta</th>
                     <th>Kuva</th>
                     <th>Valmistaja</th>
-                    <th>Tuotekategoria</th>
+                    <th>Tuotekatekoria</th>
                 </tr>
             </thead>
             <tbody>
