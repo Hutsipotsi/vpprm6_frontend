@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, {useState, useEffect} from "react";
 import CategoryList from "../components/CategoryList";
-import Products from "./Products";
 import uuid from "react-uuid";
 
 export default function ManageProducts({url}) {
@@ -16,7 +15,7 @@ export default function ManageProducts({url}) {
 
     useEffect(() => {
       if (selectedCategory !== null) {
-        axios.get(url + 'products/getproducts.php/' + selectedCategory.id)
+        axios.get(url + 'products/getallproducts.php/' + selectedCategory.id)
         .then((response) => {
             const json = response.data;
             if (json) {

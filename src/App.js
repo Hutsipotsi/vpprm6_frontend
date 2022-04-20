@@ -8,8 +8,7 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ManageCategories from "./pages/ManageCategories";
-
-import ManageProducts from "./pages/addingproducts";
+import ManageProducts from "./pages/ManageProducts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Order from "./components/Order";
 import { editableInputTypes } from "@testing-library/user-event/dist/utils";
@@ -68,6 +67,8 @@ function App() {
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
           <Route path="/managecategories" element={<ManageCategories url={URL} />} />
           <Route path="login" element={<Login />} />
+          <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
+          <Route path="register" element={<Register />} />
         </Routes>
       </div>
       <Footer />
