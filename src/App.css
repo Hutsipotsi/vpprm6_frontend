@@ -115,7 +115,6 @@ nav {
 }*/
 
 .prodCard {
-  
   padding: 3px;
   max-height: 500px;
   display: inline-table;
@@ -130,6 +129,7 @@ nav {
 
 .catlist {
   margin-top: 30px;
+  margin-right: 10px;
   margin-bottom: 30px;
 }
 
@@ -141,7 +141,10 @@ nav {
 .prodlist {
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-right: 10px;
+}
+
+.btn {
+  margin-left: 20px;
 }
 
 .prodtable {
@@ -158,11 +161,20 @@ nav {
   padding-right: 20px;
 }
 
-.tbody td {
-  padding-right: 10px;
-  margin-right: 20px;
+.addprodlist {
+  margin-top: 5px;
+  display: table-row-group;
 }
 
+.addlist {
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+.addprodlist h3 {
+  margin-top: 30px;
+}
 .register {
   margin-top: 40px;
   margin-bottom: 40px;

@@ -29,7 +29,7 @@ export default function ManageCategories({url}) {
             <div className="catlist">
             <h3>Hallinnoi kategoriaa</h3>
             <div>
-                <label>Kategoria</label>
+                <label className='catlist'>Kategoria</label>
                 <CategoryList
                 url={url}
                 selectedCategory={selectedCategory}
@@ -48,11 +48,11 @@ export default function ManageCategories({url}) {
             <h3>Lisää uusi kategoria</h3>
             <form onSubmit={saveCategory}>
                 <div>
-                    <label>Kategorian nimi</label>
+                    <label className="catlist">Kategorian nimi</label>
                     <input type="text" value={newCategory} onChange={(e) => setNewCategory(e.target.value)}/>
                 </div>
-                <button type="button" onClick={() => setAddingCategory(false)}>Peruuta</button>
-                <button type="submit">Tallenna</button>
+                <button className="catlist" type="button" onClick={() => setAddingCategory(false)}>Peruuta</button>
+                <button className="catlist" type="submit">Tallenna</button>
             </form>
             </div>
             </>

@@ -82,31 +82,33 @@ if (!addingProduct) {
 } else {
     return (
         <>
+        <div className="addprodlist">
         <h3>Lisää uusi tuote</h3>
         <form onSubmit={saveProduct}>
         <div>
-            <label>Tuote nimi</label>
+            <label className="addprodlist">Tuote nimi</label>
             <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
         </div>
         <div>
-            <label>Hinta</label>
+            <label className="addprodlist">Hinta</label>
             <input type="text" value={price} onChange={(e) => setPrice(e.target.value)}/>
         </div>
         <div>
-            <label>Kuva</label>
+            <label className="addprodlist">Kuva</label>
             <input type="text" value={image} onChange={(e) => setImage(e.target.value)}/>
         </div>
         <div>
-            <label>Valmistaja</label>
+            <label className="addprodlist">Valmistaja</label>
             <input type="text" value={manufacturer} onChange={(e) => setManufacturer(e.target.value)}/>
         </div>
         <div>
-            <label>Tuotekategoria</label>
+            <label className="addprodlist">Tuotekatekoria</label>
             <input type="text" value={prodcategory} onChange={(e) => setProdcategory(e.target.value)}/>
         </div>
-        <button type="button" onClick={()=> setAddingProduct(false)}>Peruuta</button>
-        <button type="submit">Tallenna</button>
+        <button className="addlist" type="button" onClick={()=> setAddingProduct(false)}>Peruuta</button>
+        <button className="addlist" type="submit">Tallenna</button>
         </form>
+        </div>
         </>
     )
 }
