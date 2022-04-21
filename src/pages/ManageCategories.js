@@ -26,6 +26,7 @@ export default function ManageCategories({url}) {
     if(!addingCategory) {
         return (
             <>
+            <div className="catlist">
             <h3>Hallinnoi kategoriaa</h3>
             <div>
                 <label>Kategoria</label>
@@ -36,12 +37,14 @@ export default function ManageCategories({url}) {
                 />
                 <button className="btn btn-dark" type="button" onClick={() => setAddingCategory(true)}>Lisää</button>
                 </div>
+                </div>
                 </>
         
         )
     } else {
         return (
             <>
+            <div className="catlist">
             <h3>Lisää uusi kategoria</h3>
             <form onSubmit={saveCategory}>
                 <div>
@@ -51,6 +54,7 @@ export default function ManageCategories({url}) {
                 <button type="button" onClick={() => setAddingCategory(false)}>Peruuta</button>
                 <button type="submit">Tallenna</button>
             </form>
+            </div>
             </>
         )
     }

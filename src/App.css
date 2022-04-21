@@ -128,9 +128,20 @@ nav {
   padding-bottom: 3px;
 }
 
+.catlist {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .prodMenu {
   margin-bottom: 20px;
   padding-right: 5px;
+}
+
+.prodlist {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 10px;
 }
 
 .prodtable {
@@ -145,6 +156,16 @@ nav {
 .prodtable th, td {
   padding: 5px;
   padding-right: 20px;
+}
+
+.tbody td {
+  padding-right: 10px;
+  margin-right: 20px;
+}
+
+.register {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 footer {

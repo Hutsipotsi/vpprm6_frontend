@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 
 const Register = () => {
   return (
-    <Form>
+    <Form className="register">
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalfName">
         <Form.Label column sm={2}>Etunimi
         </Form.Label>

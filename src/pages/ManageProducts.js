@@ -48,6 +48,7 @@ function saveProduct(e) {
 if (!addingProduct) {
     return (
         <>
+        <div className="prodlist">
         <h3>Hallitse tuotteita</h3>
         <CategoryList url={url} selectedCategory = {selectedCategory} setSelectedCategory={setSelectedCategory}/>
         <table className="prodtable">
@@ -74,6 +75,7 @@ if (!addingProduct) {
         </table>
         <div>
         <button className="btn btn-dark" type="button" onClick={()=> setAddingProduct(true)}>Lisää</button> 
+        </div>
         </div>
         </>
     )
