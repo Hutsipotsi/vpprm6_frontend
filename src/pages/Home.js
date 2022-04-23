@@ -13,7 +13,7 @@ export default function Home({ url, addToCart }) {
 
   useEffect(() => {
 
-    axios.get(url + 'products/getsale.php/')
+    axios.get(url + 'products/getsale.php')
       .then((response) => {
         const json = response.data;
         if(json) {
