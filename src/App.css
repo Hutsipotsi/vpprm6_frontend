@@ -265,3 +265,7 @@ h4 {
 #productOverline {
   text-decoration: line-through;
 }
+
+#saleprice {
+  color: red;
+}

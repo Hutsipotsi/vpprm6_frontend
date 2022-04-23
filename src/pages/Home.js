@@ -1,12 +1,33 @@
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect }  from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import Button from "react-bootstrap/Button";
-import CloseButton from "react-bootstrap/CloseButton";
+import { Col, Row } from "react-bootstrap";
 
-export default function Home() {
+
+export default function Home({ url, addToCart }) {
+  const [sales, setSales] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+
+    axios.get(url + 'products/getsale.php/')
+      .then((response) => {
+        const json = response.data;
+        if(json) {
+          setSales(json.sales);
+          setProducts(json.product);
+        }
+      })
+      .catch((error) => {
+        alert(error.response === undefined ? error : error.response.data.error);
+      });
+  }, [sales]);
+
   return (
+    
     <div>
       <Carousel variant="dark">
         <Carousel.Item>
@@ -48,170 +69,33 @@ export default function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <>
       <h3 id="saleText">Viikon tarjoukset</h3>
-    <div id="cards">
+      <container> 
       <CardGroup>
-        <Card border="warning" style={{ width: "18rem" }}>
-          <Card.Img
-            variant="top"
-            src={require("../images/westside-discs_bt-origio_pohjan-poika.jpg")}
-            alt="PlaceHolderPicture"
-          />
-          <Card.Body>
-            <Card.Title>Kiekko Pohjanpoika</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-              <h4>7.99€</h4>
-              <p>Ilman alennusta
-                <p id="productOverline">10.99€</p>
-              </p>
-            </Card.Text>
-            <Button
-              variant="primary"
-              id="goToProducts"
-              type="button"
-              href="products/1/"
-            >
-              Kiekot
-            </Button>
-          </Card.Body>
-        </Card>
-        <Card border="warning" style={{ width: "18rem" }}>
-          <Card.Img
-            variant="top"
-            src={require("../images/backpack.png")}
-            alt="PlaceHolderPicture"
-          />
-          <Card.Body>
-            <Card.Title>Kiekko reppu</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-              <h4>109.99€</h4>
-              <p>Ilman alennusta
-                <p id="productOverline">129.00€</p>
-              </p>
-            </Card.Text>
-            <Button
-              variant="primary"
-              id="goToProducts"
-              type="button"
-              href="products/3/"
-            >
-              Reput
-            </Button>
-          </Card.Body>
-        </Card>
-        <Card border="warning" style={{ width: "18rem" }}>
-          <Card.Img
-            variant="top"
-            src={require("../images/disc-golf.jpg")}
-            alt="PlaceHolderPicture"
-          />
-          <Card.Body>
-            <Card.Title>Kori Target</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-              <h4>99.99€</h4>
-              <p>Ilman alennusta
-                <p id="productOverline">149.00€</p>
-              </p>
-            </Card.Text>
-            <Button
-              variant="primary"
-              id="goToProducts"
-              type="button"
-              href="products/2/"
-            >
-              Korit
-            </Button>
-          </Card.Body>
-        </Card>
-      </CardGroup>
-
-      <CardGroup className="saleProdCard">
-        <Card border="warning" style={{ width: "18rem" }}>
-          <Card.Img
-            variant="top"
-            src={require("../images/disc-golf-bag.jpg")}
-            alt="PlaceHolderPicture"
-          />
-          <Card.Body>
-            <Card.Title>Kiekko kassi</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-              <h4>19.99€</h4>
-              <p>Ilman alennusta
-                <p id="productOverline">29.90€</p>
-              </p>
-            </Card.Text>
-            <Button
-              variant="primary"
-              id="goToProducts"
-              type="button"
-              href="products/3/"
-            >
-              Reput
-            </Button>
-          </Card.Body>
-        </Card>
-        <Card border="warning" style={{ width: "18rem" }}>
-          <Card.Img
-            variant="top"
-            src={require("../images/innova_champion_krait.jpg")}
-            alt="PlaceHolderPicture"
-          />
-          <Card.Body>
-            <Card.Title>Kiekko Krait</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-              <h4>12.90€</h4>
-              <p>Ilman alennusta
-                <p id="productOverline">17.90€</p>
-              </p>
-            </Card.Text>
-            <Button
-              variant="primary"
-              id="goToProducts"
-              type="button"
-              href="products/1/"
-            >
-              Kiekot
-            </Button>
-          </Card.Body>
-        </Card>
-        <Card border="warning" style={{ width: "18rem" }}>
-          <Card.Img
-            variant="top"
-            src={require("../images/disc-golf2.jpg")}
-            alt="PlaceHolderPicture"
-          />
-          <Card.Body>
-            <Card.Title>Kori Traveler</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-              <h4>150.90€</h4>
-              <p>Ilman alennusta
-                <p id="productOverline">199.00€</p>
-              </p>
-            </Card.Text>
-            <Button
-              variant="primary"
-              id="goToProducts"
-              type="button"
-              href="products/2/"
-            >
-              Korit
-            </Button>
-          </Card.Body>
-        </Card>
-      </CardGroup>
+        <Row>
+          {sales.map((product) => (
+            <Col xs={1} className="prodCard">
+              <Card border="warning" style={{ width: '16rem' }}>
+                <Card.Body>
+                  <div key={product.id}>
+                    <a href={url + 'images/' + product.image}><Card.Img variant="top" src={url + 'images/' + product.image} alt="tuotekuva" /></a>
+                    <Card.Title className="title">{product.name}</Card.Title>
+                    <Card.Subtitle className="mb-3" id="saleprice">{product.discount} €</Card.Subtitle>
+                    <Card.Text> 
+                      Normaali hinta ilman alennusta {product.price}.
+                    </Card.Text>
+                    <Button variant='btn btn-primary' id='addCart' type='button' onClick={e => addToCart(product)}>Add to cart</Button>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        </CardGroup>
+      </container>
+      </>
     </div>
-    </div>
+    
   );
 }

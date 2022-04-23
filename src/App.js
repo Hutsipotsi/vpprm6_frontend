@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ManageCategories from "./pages/ManageCategories";
 import ManageProducts from "./pages/ManageProducts";
+import Sale from "./pages/Sale"; 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Order from "./components/Order";
 import { editableInputTypes } from "@testing-library/user-event/dist/utils";
@@ -61,14 +62,15 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/sale" element={<Sale url={URL}/>} />
           <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart} />} />
           <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
           <Route path="/products/:nopeus/:liito/:vakaus/:feidi" element={<Products url={URL} addToCart={addToCart} />} />
           <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
           <Route path="/managecategories" element={<ManageCategories url={URL} />} />
-          <Route path="login" element={<Login />} />
+          <Route path="/login" element={<Login url={URL}/>} />
           <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
-          <Route path="register" element={<Register />} />
+          <Route path="/register" element={<Register url={URL}/>} />
         </Routes>
       </div>
       <Footer />
