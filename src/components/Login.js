@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 
 const Login = () => {
   return (
-    <Form>
+    <Form className="login">
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
         <Form.Label column sm={2}>Sähköposti
         </Form.Label>
