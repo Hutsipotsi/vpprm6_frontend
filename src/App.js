@@ -9,7 +9,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ManageCategories from "./pages/ManageCategories";
 import ManageProducts from "./pages/ManageProducts";
-import Sale from "./pages/Sale";
+import SaleProducts from "./pages/SaleProducts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Order from "./components/Order";
 
@@ -64,8 +64,8 @@ function App() {
       <Navbar url={URL} cart={cart} />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home url={URL} />} />
-          <Route path="/sale" element={<Sale url={URL} addToCart={addToCart} />} />
+          <Route path="/" element={<Home url={URL} addToCart={addToCart} />} />
+          <Route path="/sale" element={<SaleProducts url={URL} addToCart={addToCart} />} />
           <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart} />} />
           <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
           <Route path="/products/:nopeus/:liito/:vakaus/:feidi" element={<Products url={URL} addToCart={addToCart} />} />

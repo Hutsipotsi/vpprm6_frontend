@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import Button from 'react-bootstrap/Button'
 import { Col, Row } from "react-bootstrap";
-import DiscSearch from "../components/DiscSearch";
 import Products from "./Products";
 
 export default function SaleProducts({ url, addToCart }) {
