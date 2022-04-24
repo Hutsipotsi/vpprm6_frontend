@@ -2,7 +2,7 @@ import axios from "axios";
 import React, {useState, useEffect} from "react";
 import CategoryList from "../components/CategoryList";
 import uuid from "react-uuid";
-import Table from 'react-bootstrap/Table'
+
 
 export default function ManageProducts({url}) {
     const [selectedCategory, setSelectedCategory] = useState(null);
@@ -30,7 +30,7 @@ export default function ManageProducts({url}) {
 
 function saveProduct(e) {
     e.preventDefault();
-    const json = JSON.stringify({name: name,price: price,image: image,manufacturer: manufacturer,category: prodcategory,id: selectedCategory.id});
+    const json = JSON.stringify({name: name,price: price,image: image,manufacturer: manufacturer, prodcategory: selectedCategory.id});
     axios.post(url + 'products/addproducts.php',json,{
         headers: {
             'Content-Type' : 'application/json'
