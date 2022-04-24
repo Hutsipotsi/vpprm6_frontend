@@ -9,10 +9,9 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ManageCategories from "./pages/ManageCategories";
 import ManageProducts from "./pages/ManageProducts";
-import Sale from "./pages/Sale"; 
+import Sale from "./pages/Sale";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Order from "./components/Order";
-import { editableInputTypes } from "@testing-library/user-event/dist/utils";
 
 const URL = 'http://localhost/vpprm6_backend/';
 
@@ -46,6 +45,10 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(itemsWithoutRemoved));
   }
 
+  function emptyCart() {
+    setCart([]);
+  }
+
   function updateAmount(amount, product) {
     product.amount = amount;
     const index = cart.findIndex((item => item.id === product.id));
@@ -54,7 +57,7 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(modifiedCart));
   }
 
-  
+
   return (
     <Router>
       {/*<Header /> Header if needed */}
@@ -62,15 +65,15 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home url={URL} />} />
-          <Route path="/sale" element={<Sale url={URL} addToCart={addToCart}/>} />
+          <Route path="/sale" element={<Sale url={URL} addToCart={addToCart} />} />
           <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart} />} />
           <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
           <Route path="/products/:nopeus/:liito/:vakaus/:feidi" element={<Products url={URL} addToCart={addToCart} />} />
-          <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
+          <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
           <Route path="/managecategories" element={<ManageCategories url={URL} />} />
-          <Route path="/login" element={<Login url={URL}/>} />
+          <Route path="/login" element={<Login url={URL} />} />
           <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
-          <Route path="/register" element={<Register url={URL}/>} />
+          <Route path="/register" element={<Register url={URL} />} />
         </Routes>
       </div>
       <Footer />
