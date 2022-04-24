@@ -61,7 +61,7 @@ function App() {
       <Navbar url={URL} cart={cart} />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Home url={URL} />} />
+          <Route path="/" element={<Home url={URL} addToCart={addToCart}/>} />
           <Route path="/sale" element={<Sale url={URL} addToCart={addToCart}/>} />
           <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart} />} />
           <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
