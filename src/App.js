@@ -64,13 +64,8 @@ function App() {
       <Navbar url={URL} cart={cart} />
       <div className="container">
         <Routes>
-<<<<<<< HEAD
           <Route path="/" element={<Home url={URL} />} />
           <Route path="/sale" element={<Sale url={URL} addToCart={addToCart} />} />
-=======
-          <Route path="/" element={<Home url={URL} addToCart={addToCart}/>} />
-          <Route path="/sale" element={<Sale url={URL} addToCart={addToCart}/>} />
->>>>>>> 7c09ebf22150ad6adc4822e69c1c851b2717aa94
           <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart} />} />
           <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
           <Route path="/products/:nopeus/:liito/:vakaus/:feidi" element={<Products url={URL} addToCart={addToCart} />} />
