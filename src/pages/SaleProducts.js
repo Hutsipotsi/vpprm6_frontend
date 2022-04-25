@@ -47,7 +47,7 @@ export default function SaleProducts({ url, addToCart }) {
                     <Card.Text> 
                       Normaali hinta ilman alennusta {product.price}.
                     </Card.Text>
-                    <Button variant='btn btn-secondary' id='addCart' type='button' onClick={e => addToCart(product)}>Add to cart</Button>
+                    <Button variant='btn btn-secondary' id='addCart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</Button>
                   </div>
                 </Card.Body>
               </Card>

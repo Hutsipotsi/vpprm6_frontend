@@ -76,7 +76,7 @@ export default function Products({ url, addToCart }) {
                     <Card.Text> 
                       Some quick example text to build on the card title and make up the bulk of the card's content.
                     </Card.Text>
-                    <Button variant='btn btn-secondary' id='addCart' type='button' onClick={e => addToCart(product)}>Add to cart</Button>
+                    <Button variant='btn btn-secondary' id='addCart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</Button>
                   </div>
                 </Card.Body>
               </Card>
