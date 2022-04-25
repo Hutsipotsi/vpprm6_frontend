@@ -1,14 +1,13 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom"; //For Routing: <Link></Link> instead of <a></a>, to="" instead of href=""
-import Cart from '../components/Cart';
+import Cart from "../components/Cart";
 
-
-export default function Navbar({ url, cart}) {
+export default function Navbar({ url, cart }) {
   const [categories, setCategories] = useState([]);
-  const [search, setSearch] = useState('');
- 
-const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -25,7 +24,7 @@ const navigate = useNavigate();
   function executeSearch(e) {
     if (e.charCode === 13) {
       e.preventDefault();
-      navigate('/search/' + search);
+      navigate("/search/" + search);
     }
   }
   return (
@@ -48,7 +47,7 @@ const navigate = useNavigate();
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link" id="text" href="sale">
+            <a className="nav-link" id="text" href="/sale">
               Tarjoukset
             </a>
           </li>
@@ -79,14 +78,18 @@ const navigate = useNavigate();
             </ul>
           </li>
           <li className="navbar-nav">
-            <Link className="nav-link" id="managementText" to="/managecategories">
+            <Link
+              className="nav-link"
+              id="managementText"
+              to="/managecategories"
+            >
               Hallinta
             </Link>
             <Link className="nav-link" id="managementText" to="/manageproducts">
               Tuote
             </Link>
-            </li>
-        </ul>  
+          </li>
+        </ul>
         <ul>
           <li className="navbar-nav">
             <Link className="nav-link" id="icon" to="/login">
