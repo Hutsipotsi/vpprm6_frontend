@@ -47,10 +47,10 @@ nav {
   min-height: 72vh;
 }
 
-.navbar-left 
+
 
 #searchbar {
-  width: 500px;
+  width: 300px;
   left: 50px;
   padding: 5px;
   
@@ -118,6 +118,7 @@ nav {
   padding: 3px;
   max-height: 500px;
   display: inline-table;
+
 }
 
 .title {

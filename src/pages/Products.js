@@ -25,7 +25,7 @@ export default function Products({ url, addToCart }) {
     }else {
       address = url + 'products/searchproducts.php/' + params.searchPhrase;
     }
-
+    
     if(params.prodcategory !== undefined) {
       address = url + "products/getproducts.php/" + params.prodcategory;
     }
@@ -35,6 +35,8 @@ export default function Products({ url, addToCart }) {
       "&vakaus=" + params.vakaus +
       "&feidi=" + params.feidi;
     } 
+    
+    
     axios.get(address)
       .then((response) => {
         const json = response.data;
@@ -65,7 +67,7 @@ export default function Products({ url, addToCart }) {
         <Row>
           {products.map((product) => (
             <Col xs={1} className="prodCard">
-              <Card border="warning" style={{ width: '16rem' }}>
+              <Card border="light" style={{ width: '16rem' }}>
                 <Card.Body>
                   <div key={product.id}>
                     <a href={url + 'images/' + product.image}><Card.Img variant="top" src={url + 'images/' + product.image} alt="tuotekuva" /></a>
@@ -74,7 +76,7 @@ export default function Products({ url, addToCart }) {
                     <Card.Text> 
                       Some quick example text to build on the card title and make up the bulk of the card's content.
                     </Card.Text>
-                    <Button variant='btn btn-primary' id='addCart' type='button' onClick={e => addToCart(product)}>Add to cart</Button>
+                    <Button variant='btn btn-secondary' id='addCart' type='button' onClick={e => addToCart(product)}>Add to cart</Button>
                   </div>
                 </Card.Body>
               </Card>
