@@ -61,22 +61,24 @@ function App() {
   return (
     <Router>
       {/*<Header /> Header if needed */}
-      <Navbar url={URL} cart={cart} />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home url={URL} addToCart={addToCart} />} />
-          <Route path="/sale" element={<SaleProducts url={URL} addToCart={addToCart} />} />
-          <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart} />} />
-          <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
-          <Route path="/products/:nopeus/:liito/:vakaus/:feidi" element={<Products url={URL} addToCart={addToCart} />} />
-          <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
-          <Route path="/managecategories" element={<ManageCategories url={URL} />} />
-          <Route path="/login" element={<Login url={URL} />} />
-          <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
-          <Route path="/register" element={<Register url={URL} />} />
-        </Routes>
+      <div id="site-content">
+        <Navbar url={URL} cart={cart} />
+        <div className="container" >
+          <Routes>
+            <Route path="/" element={<Home url={URL} addToCart={addToCart} />} />
+            <Route path="/sale" element={<SaleProducts url={URL} addToCart={addToCart} />} />
+            <Route path="/products/:prodcategory" element={<Products url={URL} addToCart={addToCart} />} />
+            <Route path="/search/:searchPhrase" element={<Products url={URL} />} />
+            <Route path="/products/:nopeus/:liito/:vakaus/:feidi" element={<Products url={URL} addToCart={addToCart} />} />
+            <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
+            <Route path="/managecategories" element={<ManageCategories url={URL} />} />
+            <Route path="/login" element={<Login url={URL} />} />
+            <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
+            <Route path="/register" element={<Register url={URL} />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
