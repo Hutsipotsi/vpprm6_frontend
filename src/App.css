@@ -21,6 +21,19 @@ nav {
   font-family: 'Nunito', sans-serif;
 }
 
+#site-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  /* position: relative;
+  bottom: 0; */
+  margin-top: auto;
+  background-color: var(--background-darker);
+}
+
 #managementText {
   margin: 5px;
 }
@@ -47,7 +60,11 @@ nav {
   min-height: 72vh;
 }
 
+<<<<<<< HEAD
+/* .navbar-left  */
+=======
 
+>>>>>>> 60ee02e9b5fe8649ddd0418d2d069087faa3b2de
 
 #searchbar {
   width: 300px;
@@ -192,6 +209,9 @@ nav {
   margin-bottom: 40px;
 }
 
+<<<<<<< HEAD
+#footerIcons {
+=======
 footer {
   position: relative;
   bottom: 0;
@@ -199,6 +219,7 @@ footer {
 }
 
 #footerIcons a, #footerIcons {
+>>>>>>> 60ee02e9b5fe8649ddd0418d2d069087faa3b2de
   margin-top: 10vh;
   text-decoration: none;
   color: var(--text-dark) !important;
