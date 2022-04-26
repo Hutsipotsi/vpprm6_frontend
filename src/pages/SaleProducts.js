@@ -38,7 +38,7 @@ export default function SaleProducts({ url, addToCart }) {
         <Row>
           {sales.map((product) => (
             <Col xs={1} className="prodCard">
-              <Card border="light" style={{ width: '16rem' }}>
+              <Card border="warning" style={{ width: '16rem' }}>
                 <Card.Body>
                   <div key={product.id}>
                     <a href={url + 'images/' + product.image}><Card.Img variant="top" src={url + 'images/' + product.image} alt="tuotekuva" /></a>
@@ -47,7 +47,7 @@ export default function SaleProducts({ url, addToCart }) {
                     <Card.Text> 
                       Normaali hinta ilman alennusta {product.price}.
                     </Card.Text>
-                    <Button variant='btn btn-secondary' id='addCart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</Button>
+                    <Button variant='btn btn-warning' id='addCart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</Button>
                   </div>
                 </Card.Body>
               </Card>

@@ -82,7 +82,7 @@ export default function Home({ url, addToCart }) {
                     <Card.Text> 
                       Normaali hinta ilman alennusta {product.price}.
                     </Card.Text>
-                    <Button variant='outline-warning' id='addCart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</Button>
+                    <Button variant='btn btn-warning' id='addCart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</Button>
                   </div>
                 </Card.Body>
               </Card>
