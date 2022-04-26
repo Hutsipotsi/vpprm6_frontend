@@ -58,7 +58,7 @@ if (!addingProduct) {
                     <th>Hinta</th>
                     <th>Kuva</th>
                     <th>Valmistaja</th>
-                    <th>Tuotekatekoria</th>
+                    <th>Tuotekategoria</th>
                 </tr>
             </thead>
             <tbody>

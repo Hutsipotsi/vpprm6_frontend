@@ -58,6 +58,7 @@ nav {
 
 .carousel {
   padding: 10px;
+  margin: 25px;
 }
 
 .carousel-item {
@@ -197,8 +198,10 @@ footer {
   background-color: var(--background-darker);
 }
 
-#footerIcons {
+#footerIcons a, #footerIcons {
   margin-top: 10vh;
+  text-decoration: none;
+  color: var(--text-dark) !important;
 }
 
 #text {
