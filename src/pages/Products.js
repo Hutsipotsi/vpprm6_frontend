@@ -19,23 +19,19 @@ export default function Products({ url, addToCart }) {
   useEffect(() => {
     let address = '';
 
-    if(params.searchPhrase === undefined) {
-      address = url + 'products/getproducts.php/' + params.categoryId;
-
-    }else {
-      address = url + 'products/searchproducts.php/' + params.searchPhrase;
-    }
-    
     if(params.prodcategory !== undefined) {
-      address = url + "products/getproducts.php/" + params.prodcategory;
+      address = url + 'products/getproducts.php/' + params.prodcategory;
+
+    }else if(params.searchPhrase !== undefined){
+      address = url + 'products/searchproducts.php/' + params.searchPhrase;
     }
     else {
       address = url + "products/getdiscs.php/?nopeus=" + params.nopeus +
       "&liito=" + params.liito +
       "&vakaus=" + params.vakaus +
       "&feidi=" + params.feidi;
-    } 
-    
+    }
+
     
     axios.get(address)
       .then((response) => {
@@ -43,14 +39,14 @@ export default function Products({ url, addToCart }) {
         if(params.searchPhrase === undefined) {
           setCategoryName(json.category);
           setProducts(json.products);
-        }else {
+        }else if(params.searchPhrase !==undefined){
           setCategoryName(params.searchPhrase);
           setProducts(json);
-        }
+        } else  {
         setCategoryName(json.productgroup);
         setProducts(json.products);
         setDiscproperty(json.discproperty);
-      })
+      }})
       .catch((error) => {
         alert(error.response === undefined ? error : error.response.data.error);
       });
