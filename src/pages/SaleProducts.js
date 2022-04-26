@@ -38,7 +38,7 @@ export default function SaleProducts({ url, addToCart }) {
         <Row>
           {sales.map((product) => (
             <Col xs={1} className="prodCard">
-              <Card border="warning" style={{ width: '16rem' }}>
+              <Card border="warning" style={{ width: '16rem', height: '30rem' }}>
                 <Card.Body>
                   <div key={product.id}>
                     <a href={url + 'images/' + product.image}><Card.Img variant="top" src={url + 'images/' + product.image} alt="tuotekuva" /></a>

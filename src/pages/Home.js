@@ -31,8 +31,7 @@ export default function Home({ url, addToCart }) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            img
-            src={require("../images/backpack.png")}
+            img src={require("../images/backpack.png")}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -43,8 +42,7 @@ export default function Home({ url, addToCart }) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            img
-            src={require("../images/disc-golf.jpg")}
+            img src={require("../images/disc-golf.jpg")}
             alt="Second slide"
           />
           <Carousel.Caption>
@@ -55,8 +53,7 @@ export default function Home({ url, addToCart }) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            img
-            src={require("../images/products/innova_star_boss.jpg")}
+            img src={require("../images/products/innova_star_boss.jpg")}
             alt="Third slide"
           />
           <Carousel.Caption>
@@ -74,7 +71,7 @@ export default function Home({ url, addToCart }) {
             <Row>
               {sales.splice(0, 4).map((product) => (
                 <Col xs={1} className="prodCard">
-                  <Card border="warning" style={{ width: "16rem" }}>
+                  <Card border="warning" style={{ width: "16rem", height: '30rem'}}>
                     <Card.Body>
                       <div key={product.id}>
                         <a href={url + "images/" + product.image}>
@@ -97,8 +94,7 @@ export default function Home({ url, addToCart }) {
                           variant="btn btn-warning"
                           id="addCart"
                           type="button"
-                          onClick={(e) => addToCart(product)}
-                        >
+                          onClick={(e) => addToCart(product)}>
                           Lisää ostoskoriin
                         </Button>
                       </div>

@@ -60,12 +60,10 @@ footer {
   min-height: 72vh;
 }
 
-
 #searchbar {
   width: 300px;
   left: 50px;
-  padding: 5px;
-  
+  padding: 5px;  
 }
 
 .carousel {
@@ -106,39 +104,35 @@ footer {
   margin-right: 10px;
 }
 
-/*
-#carouselImage {
-  height: 100vh;  
-  margin-left: 20px;  
-}*/
-
 .saleProdCard {
-  padding: 5px;
+  padding: 3px;
   margin-block-start: 5px;
 }
-
-/*[class^="card"] {
-  padding: 5px;
-  margin-block-end: 5px;
-}*/
-/*
-*[class^="card.img"], card.img {
-  height: 150px;
-  width: auto;
-}*/
 
 .prodCard {
   padding: 3px;
   max-height: 500px;
-  display: inline-table;
+  display: table;
+  margin-right: 3px;
+}
 
+#saleprice {
+  color: red;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+#price {
+  font-weight: bold;
+  padding-top: 20px;
 }
 
 .title {
-  max-height: 30px;
-  font-size: medium;
-  text-align: justify;
-  padding-bottom: 3px;
+  max-height: 40px;
+  font-size: large;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .catlist {
@@ -195,10 +189,12 @@ footer {
 .addprodlist h3 {
   margin-top: 30px;
 }
+
 .register {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
 .login {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -288,10 +284,22 @@ table {
 h4 {
   color: red;
 }
+
 #productOverline {
   text-decoration: line-through;
 }
+/*
+#carouselImage {
+  height: 100vh;  
+  margin-left: 20px;  
+}*/
 
-#saleprice {
-  color: red;
-}
+/*[class^="card"] {
+  padding: 5px;
+  margin-block-end: 5px;
+}*/
+/*
+*[class^="card.img"], card.img {
+  height: 150px;
+  width: auto;
+}*/
