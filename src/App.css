@@ -60,10 +60,14 @@ footer {
   min-height: 72vh;
 }
 
+<<<<<<< HEAD
 /* .navbar-left  */
+=======
+
+>>>>>>> 60ee02e9b5fe8649ddd0418d2d069087faa3b2de
 
 #searchbar {
-  width: 500px;
+  width: 300px;
   left: 50px;
   padding: 5px;
   
@@ -71,6 +75,7 @@ footer {
 
 .carousel {
   padding: 10px;
+  margin: 25px;
 }
 
 .carousel-item {
@@ -131,6 +136,7 @@ footer {
   padding: 3px;
   max-height: 500px;
   display: inline-table;
+
 }
 
 .title {
@@ -203,8 +209,20 @@ footer {
   margin-bottom: 40px;
 }
 
+<<<<<<< HEAD
 #footerIcons {
+=======
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: var(--background-darker);
+}
+
+#footerIcons a, #footerIcons {
+>>>>>>> 60ee02e9b5fe8649ddd0418d2d069087faa3b2de
   margin-top: 10vh;
+  text-decoration: none;
+  color: var(--text-dark) !important;
 }
 
 #text {

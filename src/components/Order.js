@@ -115,7 +115,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
                             </div>
                             <div className="form-group row">
                                 <label className="col-sm-2 col-form-label" for="placeOrder"></label>
-                                <button className="col-sm-2 btn btn-primary" id="placeOrder">Tilaa</button>
+                                <button className="col-sm-2 btn btn-secondary" id="placeOrder">Tilaa</button>
                             </div>
                         </form>
                     </>

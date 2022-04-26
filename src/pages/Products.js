@@ -19,36 +19,34 @@ export default function Products({ url, addToCart }) {
   useEffect(() => {
     let address = '';
 
-    if(params.searchPhrase === undefined) {
-      address = url + 'products/getproducts.php/' + params.categoryId;
-
-    }else {
-      address = url + 'products/searchproducts.php/' + params.searchPhrase;
-    }
-
     if(params.prodcategory !== undefined) {
-      address = url + "products/getproducts.php/" + params.prodcategory;
+      address = url + 'products/getproducts.php/' + params.prodcategory;
+
+    }else if(params.searchPhrase !== undefined){
+      address = url + 'products/searchproducts.php/' + params.searchPhrase;
     }
     else {
       address = url + "products/getdiscs.php/?nopeus=" + params.nopeus +
       "&liito=" + params.liito +
       "&vakaus=" + params.vakaus +
       "&feidi=" + params.feidi;
-    } 
+    }
+
+    
     axios.get(address)
       .then((response) => {
         const json = response.data;
         if(params.searchPhrase === undefined) {
           setCategoryName(json.category);
           setProducts(json.products);
-        }else {
+        }else if(params.searchPhrase !==undefined){
           setCategoryName(params.searchPhrase);
           setProducts(json);
-        }
+        } else  {
         setCategoryName(json.productgroup);
         setProducts(json.products);
         setDiscproperty(json.discproperty);
-      })
+      }})
       .catch((error) => {
         alert(error.response === undefined ? error : error.response.data.error);
       });
@@ -65,7 +63,7 @@ export default function Products({ url, addToCart }) {
         <Row>
           {products.map((product) => (
             <Col xs={1} className="prodCard">
-              <Card border="warning" style={{ width: '16rem' }}>
+              <Card border="light" style={{ width: '16rem' }}>
                 <Card.Body>
                   <div key={product.id}>
                     <a href={url + 'images/' + product.image}><Card.Img variant="top" src={url + 'images/' + product.image} alt="tuotekuva" /></a>
@@ -74,7 +72,7 @@ export default function Products({ url, addToCart }) {
                     <Card.Text> 
                       Some quick example text to build on the card title and make up the bulk of the card's content.
                     </Card.Text>
-                    <Button variant='btn btn-primary' id='addCart' type='button' onClick={e => addToCart(product)}>Add to cart</Button>
+                    <Button variant='btn btn-secondary' id='addCart' type='button' onClick={e => addToCart(product)}>Lisää ostoskoriin</Button>
                   </div>
                 </Card.Body>
               </Card>
