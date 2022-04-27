@@ -29,8 +29,13 @@ export default function Navbar({ url, cart }) {
   }
   return (
     <nav className="container-fluid navbar navbar-expand-lg navbar-light">
-      <Link className="navbar-brand" id="text" to="/">
-        Kiekkokulma
+      <Link className="navbar-brand" id="kk_logo" to="/">
+      <img
+        src={require("../images/KK_Logo.jpg")}     
+        width="100"
+        height="100"
+        className="d-inline-block align-top">
+      </img>
       </Link>
       <button
         className="navbar-toggler navbar-light"

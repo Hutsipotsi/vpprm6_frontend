@@ -217,6 +217,12 @@ footer {
   font-size: 23px;
 }
 
+#kk_logo {
+  float: left !important;
+  margin-top: -15px !important;
+}
+
+
 #icon{
   text-decoration: none;
   color: var(--text-dark);
@@ -279,10 +285,6 @@ table {
 #saleText {
   margin-left: 20px;
   padding: 10px;
-}
-
-h4 {
-  color: red;
 }
 
 #productOverline {
