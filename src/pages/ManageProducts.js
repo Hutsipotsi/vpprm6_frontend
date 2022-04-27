@@ -74,7 +74,7 @@ if (!addingProduct) {
             </tbody>
         </table>
         <div>
-        <button className="btn btn-dark" type="button" onClick={()=> setAddingProduct(true)}>Lisää</button> 
+        <button className="btn btn-warning" type="button" onClick={()=> setAddingProduct(true)}>Lisää</button> 
         </div>
         </div>
         </>
