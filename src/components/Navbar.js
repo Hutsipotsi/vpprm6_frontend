@@ -37,6 +37,7 @@ export default function Navbar({ url, cart }) {
         className="d-inline-block align-top">
       </img>
       </Link>
+      <div id="text">Kiekkokulma</div>
       <button
         className="navbar-toggler navbar-light"
         type="button"
