@@ -12,7 +12,6 @@ export default function Products({ url, addToCart }) {
   const [categoryName, setCategoryName] = useState("");
   const [products, setProducts] = useState([]);
   const [discproperty, setDiscproperty] = useState([]);
-  const [category, setCategory] = useState("");
 
   let params = useParams();
   let showDiscSearch = params.prodcategory === undefined || params.prodcategory == 1;
@@ -39,7 +38,7 @@ export default function Products({ url, addToCart }) {
         const json = response.data;
         if(params.searchPhrase === undefined) {
           setProducts(json.products);
-          setCategoryName(json.category);
+          setCategoryName(json.productgroup);
         }else if(params.searchPhrase !==undefined){
           setCategoryName('Tulokset hakusanalla: ' + params.searchPhrase);
           setProducts(json);
@@ -55,7 +54,7 @@ export default function Products({ url, addToCart }) {
 
   return (
     <>
-    <h2 className="category">Tuoteryhmä {categoryName}</h2>
+    <h2 className="category">{categoryName}</h2>
   
       <DiscSearch show={showDiscSearch}/>
       
