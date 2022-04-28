@@ -71,7 +71,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
                             return (
                                 <tr key={uuid()}>
                                     <td>{product.name}</td>
-                                    <td>{product.price} €</td>
+                                    <td>{product.price * product.amount} €</td>
                                     <td>
                                         <input type="number" ref={inputs[index]} style={{ width: '60px' }} value={product.amount} onChange={e => changeAmount(e, product, index)} />
                                     </td>
