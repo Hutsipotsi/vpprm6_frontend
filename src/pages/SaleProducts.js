@@ -12,6 +12,8 @@ export default function SaleProducts({ url, addToCart }) {
   const [products, setProducts] = useState([]);
   const [addingProduct, setAddingProduct] = useState(false);
 
+  let params = useParams();
+  
   useEffect(() => {
 
     axios.get(url + 'products/getsale.php/')
@@ -25,7 +27,7 @@ export default function SaleProducts({ url, addToCart }) {
       .catch((error) => {
         alert(error.response === undefined ? error : error.response.data.error);
       });
-  }, [sales]);
+  }, [params]);
 
 
   return (

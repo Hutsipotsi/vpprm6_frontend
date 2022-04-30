@@ -5,10 +5,13 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import Button from "react-bootstrap/Button";
 import { Col, Row } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
 
 export default function Home({ url, addToCart }) {
   const [sales, setSales] = useState([]);
   const [products, setProducts] = useState([]);
+
+  let params = useParams();
 
   useEffect(() => {
     axios
@@ -23,7 +26,7 @@ export default function Home({ url, addToCart }) {
       .catch((error) => {
         alert(error.response === undefined ? error : error.response.data.error);
       });
-  }, [sales]);
+  }, [params]);
 
   return (
     <div>
@@ -36,7 +39,7 @@ export default function Home({ url, addToCart }) {
           />
           <Carousel.Caption>
             <h3>Reppu</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <p>GRIPeq G2 Shoulder Bag</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -47,7 +50,7 @@ export default function Home({ url, addToCart }) {
           />
           <Carousel.Caption>
             <h3>Kori Target</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>DISCatcher EZ Target</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -58,9 +61,7 @@ export default function Home({ url, addToCart }) {
           />
           <Carousel.Caption>
             <h3>Innova Star Boss</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <p>Innova Star Boss</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

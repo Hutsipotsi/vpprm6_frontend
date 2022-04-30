@@ -1,33 +1,56 @@
-import React from "react";
+import React , { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form'
 import { Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import axios from "axios";
 
-const Register = () => {
+
+const Register = (url) => {
+  const [fname,setUser] = useState('');
+  const [lname,setLname] = useState('');
+  const [email,setEmail] = useState('');
+  const [pw,setPw] = useState('');
+  //const [user, setUser] = useState('');
+
+  function addUser(e) {
+    e.preventDefault();
+    const json = JSON.stringify({fname, lname, email, pw});
+    axios.post(url + 'products/adduser.php',json,{
+        headers: {
+            'Content-Type' : 'application/json'
+        }
+    })
+    .then((response) => {
+        const addUser = [...fname,response.data];
+        setUser(addUser);
+    }).catch(error => {
+        alert(error.response === undefined ? error : error.response.data.error);
+    });
+} 
   return (
     <Form className="register">
-      <Form.Group as={Row} className="mb-3" controlId="formHorizontalfName">
+      <Form.Group as={Row} className="mb-3" id="fname" controlId="formHorizontalfName">
         <Form.Label column sm={2}>Etunimi
         </Form.Label>
         <Col sm={5}>
           <Form.Control type="name" placeholder="Etunimi" />
         </Col>
       </Form.Group>
-      <Form.Group as={Row} className="mb-3" controlId="formHorizontallName">
+      <Form.Group as={Row} className="mb-3" id="fname" controlId="formHorizontallName">
         <Form.Label column sm={2}>Sukunimi
         </Form.Label>
         <Col sm={5}>
           <Form.Control type="name" placeholder="Sukunimi" />
         </Col>
       </Form.Group>
-      <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+      <Form.Group as={Row} className="mb-3" id="email" controlId="formHorizontalEmail">
         <Form.Label column sm={2}>Sähköposti
         </Form.Label>
         <Col sm={5}>
           <Form.Control type="email" placeholder="Sähköposti" />
         </Col>
       </Form.Group>
-        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
+        <Form.Group as={Row} className="mb-3" id="pw" controlId="formHorizontalPassword">
           <Form.Label column sm={2}>Salasana
           </Form.Label>
           <Col sm={5}>
