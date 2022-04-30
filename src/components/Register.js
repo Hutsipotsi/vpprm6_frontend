@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import axios from "axios";
 
 
-const Register = (url) => {
+const Register = (url, addUser) => {
   const [fname,setFname] = useState('');
   const [lname,setLname] = useState('');
   const [email,setEmail] = useState('');
@@ -14,7 +14,7 @@ const Register = (url) => {
 
   function addUser(e) {
     e.preventDefault();
-    const json = JSON.stringify({fname, lname, email, pw});
+    const json = JSON.stringify({fname: fname, lname: lname, email: email, pw: pw});
     axios.post(url + 'products/adduser.php',json,{
         headers: {
             'Content-Type' : 'application/json'
@@ -59,7 +59,7 @@ const Register = (url) => {
         </Form.Group>
             <Form.Group as={Row} className="mb-3">
               <Col sm={{ span: 6, offset: 2 }}>
-                <Button type="submit">Rekisteröidy</Button>
+                <Button type="submit" onClick={()=> addUser(true)}>Rekisteröidy</Button>
               </Col>
             </Form.Group>
       </Form>
