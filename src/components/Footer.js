@@ -18,9 +18,9 @@ export default function Footer() {
                      </tr> 
                     </table>
                     <h5 id="footerIcons">Seuraa kiekkokulmaa:
-                        <a href="https://www.instagram.com/" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://fi-fi.facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://twitter.com/?lang=fi" class="twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.instagram.com/" className="instagram"><i className="bi bi-instagram"></i></a>
+                        <a href="https://fi-fi.facebook.com/" className="facebook"><i className="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com/?lang=fi" className="twitter"><i className="bi bi-twitter"></i></a>
                     </h5>
             </div>
         </footer>

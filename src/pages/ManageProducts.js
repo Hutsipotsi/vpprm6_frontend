@@ -102,7 +102,7 @@ if (!addingProduct) {
             <input type="text" value={manufacturer} onChange={(e) => setManufacturer(e.target.value)}/>
         </div>
         <div>
-            <label className="addprodlist">Tuotekatekoria</label>
+            <label className="addprodlist">Tuotekategoria</label>
             <input type="text" value={prodcategory} onChange={(e) => setProdcategory(e.target.value)}/>
         </div>
         <button className="addlist" type="button" onClick={()=> setAddingProduct(false)}>Peruuta</button>
