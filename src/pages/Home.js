@@ -10,7 +10,6 @@ export default function Home({ url, addToCart }) {
   const [sales, setSales] = useState([]);
   const [products, setProducts] = useState([]);
 
-
   useEffect(() => {
     axios
       .get(url + "products/getsale.php")
