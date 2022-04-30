@@ -70,7 +70,7 @@ export default function Home({ url, addToCart }) {
         <container>
           <CardGroup>
             <Row>
-              {sales.splice(0, 4).map((product) => (
+              {sales.slice(0,4).map((product) => (
                 <Col xs={1} className="prodCard">
                   <Card border="warning" style={{ width: "16rem", height: '30rem'}}>
                     <Card.Body>
