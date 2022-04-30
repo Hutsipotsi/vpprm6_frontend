@@ -4,21 +4,21 @@ import { Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
 
-const Login = () => {
+const Login = (uname, password) => {
   return (
     <Form className="login">
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
         <Form.Label column sm={2}>Sähköposti
         </Form.Label>
         <Col sm={6}>
-          <Form.Control type="email" placeholder="Sähköposti" />
+          <Form.Control type="email" placeholder="Sähköposti" value={uname}/>
         </Col>
       </Form.Group>
         <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
           <Form.Label column sm={2}>Salasana
           </Form.Label>
           <Col sm={6}>
-            <Form.Control type="password" placeholder="Salasana" />
+            <Form.Control type="password" placeholder="Salasana" value={password}/>
           </Col>
         </Form.Group>
           <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">

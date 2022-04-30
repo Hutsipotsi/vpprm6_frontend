@@ -57,9 +57,6 @@ function App() {
     localStorage.setItem('cart', JSON.stringify(modifiedCart));
   }
 
-  function addUser(fname, lname, email, pw) {
-    const json = JSON.stringify({fname, lname, email, pw});
-        }
 
   return (
     <Router>
@@ -77,7 +74,8 @@ function App() {
             <Route path="/managecategories" element={<ManageCategories url={URL} />} />
             <Route path="/login" element={<Login url={URL} />} />
             <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
-            <Route path="/register" element={<Register url={URL} addUser={addUser}/>} />
+            <Route path="/register" element={<Register url={URL} />} />
+            <Route path="/products/" element={<Products url={URL} addToCart={addToCart} />} />
           </Routes>
         </div>
         <Footer />
