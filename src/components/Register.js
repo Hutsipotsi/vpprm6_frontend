@@ -6,11 +6,11 @@ import axios from "axios";
 
 
 const Register = (url) => {
-  const [fname,setUser] = useState('');
+  const [fname,setFname] = useState('');
   const [lname,setLname] = useState('');
   const [email,setEmail] = useState('');
   const [pw,setPw] = useState('');
-  //const [user, setUser] = useState('');
+  const [user, setUser] = useState('');
 
   function addUser(e) {
     e.preventDefault();
@@ -29,32 +29,32 @@ const Register = (url) => {
 } 
   return (
     <Form className="register">
-      <Form.Group as={Row} className="mb-3" id="fname" controlId="formHorizontalfName">
+      <Form.Group as={Row} className="mb-3" controlId="formHorizontalName"  >
         <Form.Label column sm={2}>Etunimi
         </Form.Label>
         <Col sm={5}>
-          <Form.Control type="name" placeholder="Etunimi" />
+          <Form.Control type="name" placeholder="Etunimi" value={fname} onChange={(e) => setFname(e.target.value)}/>
         </Col>
       </Form.Group>
-      <Form.Group as={Row} className="mb-3" id="fname" controlId="formHorizontallName">
+      <Form.Group as={Row} className="mb-3" controlId="formHorizontallName">
         <Form.Label column sm={2}>Sukunimi
         </Form.Label>
         <Col sm={5}>
-          <Form.Control type="name" placeholder="Sukunimi" />
+          <Form.Control type="name" placeholder="Sukunimi" value={lname} onChange={(e) => setLname(e.target.value)}/>
         </Col>
       </Form.Group>
-      <Form.Group as={Row} className="mb-3" id="email" controlId="formHorizontalEmail">
+      <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
         <Form.Label column sm={2}>Sähköposti
         </Form.Label>
         <Col sm={5}>
-          <Form.Control type="email" placeholder="Sähköposti" />
+          <Form.Control type="email" placeholder="Sähköposti" value={email} onChange={(e) => setEmail(e.target.value)}/>
         </Col>
       </Form.Group>
-        <Form.Group as={Row} className="mb-3" id="pw" controlId="formHorizontalPassword">
+        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
           <Form.Label column sm={2}>Salasana
           </Form.Label>
           <Col sm={5}>
-            <Form.Control type="password" placeholder="Salasana" />
+            <Form.Control type="password" placeholder="Salasana" value={pw} onChange={(e) => setPw(e.target.value)}/>
           </Col>
         </Form.Group>
             <Form.Group as={Row} className="mb-3">

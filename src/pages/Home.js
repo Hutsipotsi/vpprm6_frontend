@@ -5,13 +5,11 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import Button from "react-bootstrap/Button";
 import { Col, Row } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
 
 export default function Home({ url, addToCart }) {
   const [sales, setSales] = useState([]);
   const [products, setProducts] = useState([]);
 
-  let params = useParams();
 
   useEffect(() => {
     axios
@@ -26,7 +24,7 @@ export default function Home({ url, addToCart }) {
       .catch((error) => {
         alert(error.response === undefined ? error : error.response.data.error);
       });
-  }, [params]);
+  }, []);
 
   return (
     <div>
@@ -70,7 +68,7 @@ export default function Home({ url, addToCart }) {
         <container>
           <CardGroup>
             <Row>
-              {sales.splice(0, 4).map((product) => (
+              {sales.slice(0, 4).map((product) => (
                 <Col xs={1} className="prodCard">
                   <Card border="warning" style={{ width: "16rem", height: '30rem'}}>
                     <Card.Body>
