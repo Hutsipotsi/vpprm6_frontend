@@ -5,6 +5,7 @@ import Products from "./pages/Products";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
+import Logout from "./components/Logout";
 import Register from "./components/Register";
 import ManageCategories from "./pages/ManageCategories";
 import ManageProducts from "./pages/ManageProducts";
@@ -16,6 +17,7 @@ const URL = 'http://localhost/vpprm6_backend/';
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [userName, setUserName] = useState('');
 
   useEffect(() => {
     if ('cart' in localStorage) {
@@ -36,7 +38,6 @@ function App() {
       localStorage.setItem('cart', JSON.stringify(newCart));
     }
   }
-
 
   function removeFromCart(product) {
     const itemsWithoutRemoved = cart.filter(item => item.id !== product.id);
@@ -61,7 +62,7 @@ function App() {
     <Router>
       {/*<Header /> Header if needed */}
       <div id="site-content">
-        <Navbar url={URL} cart={cart} />
+        <Navbar url={URL} cart={cart} userName={userName}/>
         <div className="container" >
           <Routes>
             <Route path="/" element={<Home url={URL} addToCart={addToCart} />} />
@@ -71,7 +72,8 @@ function App() {
             <Route path="/products/:nopeus/:liito/:vakaus/:feidi" element={<Products url={URL} addToCart={addToCart} />} />
             <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} emptyCart={emptyCart} />} />
             <Route path="/managecategories" element={<ManageCategories url={URL} />} />
-            <Route path="/login" element={<Login url={URL} />} />
+            <Route path="/login" element={<Login url={URL} userName={userName} setUserName={setUserName} />} />
+            <Route path="/logout" element={<Logout url={URL} setUserName={setUserName}/>} />
             <Route path="/manageproducts" element={<ManageProducts url={URL} />} />
             <Route path="/register" element={<Register url={URL} />} />
             <Route path="/products/" element={<Products url={URL} addToCart={addToCart} />} />

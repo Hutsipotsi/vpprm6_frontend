@@ -5,23 +5,24 @@ import { Button } from "react-bootstrap";
 import axios from "axios";
   
 
-export default function Login({ url }){
+export default function Login({ url, userName, setUserName }){
   const [email,setEmail] = useState('');
   const [pw,setPw] = useState('');
   const [finished, setFinished] = useState(false);
 
-
   function checkUser(e){
     e.preventDefault();
     const json = JSON.stringify({email: email, pw: pw});
-    axios.post(url + 'products/checkuser.php',json,{
+    axios.post(url + 'user/checkuser.php',json,{
         headers: {
           'Accept': 'application/json',
           'Content-Type' : 'application/json'
         }
     })
-    .then(() => {
-        setFinished(true);
+    .then((response) => {
+      const json = response.data;
+      setUserName(json.firstname);
+      setFinished(true);
     }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
     });
@@ -56,7 +57,7 @@ if (finished === false) {
       </Form>
   )
 }else {
-  return (<h3><p>Tervetuloa!</p>{email}</h3>);
+  return (<h3><p>Tervetuloa,{userName}!</p></h3>);
 
 }
 }

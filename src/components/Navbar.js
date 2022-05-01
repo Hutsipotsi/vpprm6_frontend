@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom"; //For Routing: <Link></Link> instead of <a></a>, to="" instead of href=""
 import Cart from "../components/Cart";
 
-export default function Navbar({ url, cart }) {
+export default function Navbar({ url, cart, userName }) {
   const [categories, setCategories] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -27,11 +27,32 @@ export default function Navbar({ url, cart }) {
       navigate("/search/" + search);
     }
   }
+
+  function loggedIn(logged) {
+    if (logged) {
+      return (
+        <Link className="nav-link" id="icon" to="/logout">
+          {userName} (Kirjaudu ulos)
+        </Link>);
+    }
+    else {
+      return (
+        <>
+          <Link className="nav-link" id="icon" to="/login">
+            Kirjaudu sisään
+          </Link>
+          <Link className="nav-link" id="icon" to="/register">
+            Rekisteröidy
+          </Link>
+        </>);
+    }
+  }
+
   return (
     <nav className="container-fluid navbar navbar-expand-lg navbar-light">
       <div id="kk_logo">
         <img
-          src={require("../images/KK_Logo.jpg")}     
+          src={require("../images/KK_Logo.jpg")}
           width="100"
           height="100"
           className="d-inline-block align-top">
@@ -100,12 +121,7 @@ export default function Navbar({ url, cart }) {
         </ul>
         <ul>
           <li className="navbar-nav">
-            <Link className="nav-link" id="icon" to="/login">
-              Kirjaudu sisään
-            </Link>
-            <Link className="nav-link" id="icon" to="/register">
-              Rekisteröidy
-            </Link>
+            {userName !== '' ? loggedIn(true) : loggedIn(false)}
             <i className="navba-nav" id="icon">
               <li className="nav-item">
                 <Cart cart={cart} />

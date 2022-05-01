@@ -15,7 +15,7 @@ export default function Register({ url }) {
   function addUser(e) {
     e.preventDefault();
     const json = JSON.stringify({ fname: fname, lname: lname, email: email, pw: pw });
-    axios.post(url + 'products/adduser.php', json, {
+    axios.post(url + 'user/adduser.php', json, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
