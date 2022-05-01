@@ -56,7 +56,8 @@ if (finished === false) {
       </Form>
   )
 }else {
-  return (<h3>Olet kirjautunut!</h3>);
+  return (<h3><p>Tervetuloa!</p>{email}</h3>);
+
 }
 }
 
