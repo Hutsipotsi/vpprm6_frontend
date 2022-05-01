@@ -1,16 +1,14 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-//import { Link, useParams } from "react-router-dom";
-import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
-import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Button from 'react-bootstrap/Button';
 import { Col, Row } from "react-bootstrap";
 
 
 export default function SaleProducts({ url, addToCart }) {
   const [sales, setSales] = useState([]);
   const [products, setProducts] = useState([]);
-  const [addingProduct, setAddingProduct] = useState(false);
 
 
   useEffect(() => {

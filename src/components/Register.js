@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
 import { Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import axios from "axios";
@@ -10,7 +10,6 @@ export default function Register({ url }) {
   const [lname, setLname] = useState('');
   const [email, setEmail] = useState('');
   const [pw, setPw] = useState('');
-  //const [user, setUser] = useState('');
   const [finished, setFinished] = useState(false);
 
   function addUser(e) {
@@ -23,8 +22,6 @@ export default function Register({ url }) {
       }
     })
       .then(() => {
-        // const addUser = [...fname,response.data];
-        // setUser(addUser);
         setFinished(true);
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);

@@ -76,7 +76,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
                                     <td>
                                         <input type="number" ref={inputs[index]} style={{ width: '60px' }} value={product.amount} onChange={e => changeAmount(e, product, index)} />
                                     </td>
-                                    <td><a href="#" onClick={() => removeFromCart(product)}>Delete</a></td>
+                                    <td><a href="#" onClick={() => removeFromCart(product)} id="Delete">Poista</a></td>
                                 </tr>
                             )
                         })}
@@ -116,7 +116,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
                             </div>
                             <div className="form-group row">
                                 <label className="col-sm-2 col-form-label" for="placeOrder"></label>
-                                <button className="col-sm-2 btn btn-secondary" id="placeOrder">Tilaa</button>
+                                <button className="col-sm-2 btn btn-warning" id="placeOrder">Tilaa</button>
                             </div>
                         </form>
                     </>

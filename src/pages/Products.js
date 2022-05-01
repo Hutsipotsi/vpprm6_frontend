@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
-import Button from 'react-bootstrap/Button'
-import CloseButton from 'react-bootstrap/CloseButton'
+import { useParams } from "react-router-dom";
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Button from 'react-bootstrap/Button';
 import { Col, Row } from "react-bootstrap";
 import DiscSearch from "../components/DiscSearch";
 
