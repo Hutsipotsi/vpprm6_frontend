@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import axios from "axios";
 
 
-const Register = (url, addUser) => {
+export default function Register ({url, addUser}) {
   const [fname,setFname] = useState('');
   const [lname,setLname] = useState('');
   const [email,setEmail] = useState('');
@@ -65,4 +65,4 @@ const Register = (url, addUser) => {
       </Form>
   )
 }
-export default Register;
+
