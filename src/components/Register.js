@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
 import { Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import axios from "axios";
