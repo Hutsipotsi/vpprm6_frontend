@@ -110,18 +110,11 @@ nav {
   font-weight: bold;
   padding-top: 20px;
 }
-<<<<<<< HEAD
 
 #totalPrice {
   text-decoration: underline;
 }
 
-=======
-  #Delete {
-    text-decoration: none;
-    color: rgb(247, 113, 4);
-  }
->>>>>>> 75c186994f6ca8bcd53e6ccf080c51ce6fba1dd8
 #price {
   font-weight: bold;
   padding-top: 20px;

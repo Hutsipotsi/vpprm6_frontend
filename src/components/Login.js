@@ -8,25 +8,27 @@ import axios from "axios";
 const Login = (url, checkUser) => {
   const [email,setEmail] = useState('');
   const [pw,setPw] = useState('');
+  const [finished, setFinished] = useState(false);
+
 
   function checkUser(e){
     e.preventDefault();
     const json = JSON.stringify({email: email, pw: pw});
     axios.post(url + 'products/checkuser.php',json,{
         headers: {
-            'Content-Type' : 'application/json'
+          'Accept': 'application/json',
+          'Content-Type' : 'application/json'
         }
     })
-    .then((response) => {
-        const checkUser = [...email,response.data];
-        setEmail(checkUser);
+    .then(() => {
+        setFinished(true);
     }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
     });
 } 
 
   return (
-    <Form className="login">
+    <Form className="login" onSubmit={checkUser}>
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
         <Form.Label column sm={2}>Sähköposti
         </Form.Label>
@@ -48,10 +50,11 @@ const Login = (url, checkUser) => {
             </Form.Group>
             <Form.Group as={Row} className="mb-3">
               <Col sm={{ span: 6, offset: 2 }}>
-                <Button type="submit" onClick={()=> checkUser(true)}>Kirjaudu</Button>
+                <Button type="submit">Kirjaudu</Button>
               </Col>
             </Form.Group>
       </Form>
   )
 }
+
 export default Login;
