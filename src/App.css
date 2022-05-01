@@ -27,8 +27,6 @@ nav {
   flex-direction: column;
 }
 
-
-
 #managementText {
   margin: 5px;
 }
@@ -61,6 +59,7 @@ nav {
   padding: 5px;  
   
 }
+
 
 .carousel {
   padding: 10px;
@@ -118,7 +117,9 @@ nav {
   font-weight: bold;
   padding-top: 20px;
 }
-
+#totalPrice {
+  text-decoration: underline;
+}
 #price {
   font-weight: bold;
   padding-top: 20px;
@@ -208,6 +209,8 @@ footer {
   margin-top: 10vh;
   text-decoration: none;
   color: var(--text-dark) !important;
+  margin-left: 20px;  
+
 }
 
 #text {
@@ -230,10 +233,11 @@ footer {
   font-family: 'Nunito', sans-serif;
   padding: 5px;  
   margin-top: -20px !important;
+  margin: 5px;
+ 
 }
 
-.bi{
- margin-left: 20px;  
+#cart{ 
  margin-top: -5px;
 }
 
