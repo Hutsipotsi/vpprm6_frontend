@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import axios from "axios";
   
 
-const Login = (url, checkUser) => {
+export default function Login({ url }){
   const [email,setEmail] = useState('');
   const [pw,setPw] = useState('');
   const [finished, setFinished] = useState(false);
@@ -26,7 +26,7 @@ const Login = (url, checkUser) => {
         alert(error.response === undefined ? error : error.response.data.error);
     });
 } 
-
+if (finished === false) {
   return (
     <Form className="login" onSubmit={checkUser}>
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
@@ -55,6 +55,8 @@ const Login = (url, checkUser) => {
             </Form.Group>
       </Form>
   )
+}else {
+  return (<h3>Olet kirjautunut!</h3>);
+}
 }
 
-export default Login;
