@@ -10,7 +10,6 @@ export default function Register({ url }) {
   const [lname, setLname] = useState('');
   const [email, setEmail] = useState('');
   const [pw, setPw] = useState('');
-  //const [user, setUser] = useState('');
   const [finished, setFinished] = useState(false);
 
   function addUser(e) {
@@ -23,8 +22,6 @@ export default function Register({ url }) {
       }
     })
       .then(() => {
-        // const addUser = [...fname,response.data];
-        // setUser(addUser);
         setFinished(true);
       }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);

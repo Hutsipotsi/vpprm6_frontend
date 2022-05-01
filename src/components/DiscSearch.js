@@ -48,12 +48,12 @@ export default function DiscSearch({ show }) {
                 <select className="properties" name="feidi" id="feidi" onChange={ e => setFeidi(e.target.value) }>
                     {dropdownOptions("Feidi", 0, 5)}
                 </select>
-                <Link className="btn btn-primary"
+                <Link className="btn btn-warning"
                 to={"/products/" + nopeus
                 + "/" + liito +
                 "/" + vakaus +
                 "/" + feidi}>Hae</Link>
-                <button className="btn btn-secondary" onClick={() => resetOptions()}>Tyhjennä</button>
+                <button className="btn btn-warning" onClick={() => resetOptions()}>Tyhjennä</button>
             </form>
         );
     }
