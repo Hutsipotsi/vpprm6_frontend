@@ -111,6 +111,11 @@ nav {
   padding-top: 20px;
 }
 
+#Delete {
+  text-decoration: none;
+  color: rgb(247, 113, 4);
+}
+
 #totalPrice {
   text-decoration: underline;
 }
