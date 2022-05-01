@@ -227,7 +227,7 @@ footer {
   font-size: 18px;
   font-family: 'Nunito', sans-serif;
   padding: 5px;  
-  margin-top: -20px !important;
+  margin-top: -10px !important;
   margin: 5px;
 }
 
@@ -289,4 +289,17 @@ table {
 
 #productOverline {
   text-decoration: line-through;
+}
+
+@media screen and (max-width: 991px) {
+  ul {
+    margin-left: 0px;
+    display: flow-root;  
+}
+#icon {
+  margin-left: -38px;
+}
+#searchbar {
+  margin-left: -35px;
+}
 }
