@@ -1,8 +1,4 @@
 :root {
-  /*
-    Name variables by their use: background-light, text-dark, etc.
-    -> Thus no need to change them throughout the document every time a color changes
-  */
   --main: #f5f536;
   --text-dark: #443850;
   --text-light: #f9f8f8;
@@ -56,10 +52,8 @@ nav {
 #searchbar {
   width: 300px;
   left: 50px;
-  padding: 5px;  
-  
+  padding: 5px;    
 }
-
 
 .carousel {
   padding: 10px;
@@ -108,8 +102,7 @@ nav {
   padding: 3px;
   max-height: 500px;
   display: table;
-  margin-right: 3px;
- 
+  margin-right: 3px; 
 }
 
 #saleprice {
@@ -117,9 +110,11 @@ nav {
   font-weight: bold;
   padding-top: 20px;
 }
+
 #totalPrice {
   text-decoration: underline;
 }
+
 #price {
   font-weight: bold;
   padding-top: 20px;
@@ -199,8 +194,6 @@ nav {
 }
 
 footer {
-  /* position: relative;
-  bottom: 0; */
   margin-top: auto;
   background-color: var(--background-darker);
 }
@@ -210,7 +203,6 @@ footer {
   text-decoration: none;
   color: var(--text-dark) !important;
   margin-left: 20px;  
-
 }
 
 #text {
@@ -222,9 +214,7 @@ footer {
   float: left !important;
   margin-top: -20px !important;
   padding: 10px;
-
 }
-
 
 #icon{
   text-decoration: none;
@@ -234,7 +224,6 @@ footer {
   padding: 5px;  
   margin-top: -20px !important;
   margin: 5px;
- 
 }
 
 #cart{ 
@@ -296,18 +285,3 @@ table {
 #productOverline {
   text-decoration: line-through;
 }
-/*
-#carouselImage {
-  height: 100vh;  
-  margin-left: 20px;  
-}*/
-
-/*[class^="card"] {
-  padding: 5px;
-  margin-block-end: 5px;
-}*/
-/*
-*[class^="card.img"], card.img {
-  height: 150px;
-  width: auto;
-}*/
