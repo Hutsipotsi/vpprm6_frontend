@@ -50,8 +50,9 @@ nav {
 }
 
 #searchbar {
-  width: 300px;
+  width: 325px;
   left: 50px;
+  margin-left: auto;
   padding: 5px;    
 }
 
@@ -228,7 +229,9 @@ footer {
   font-family: 'Nunito', sans-serif;
   padding: 5px;  
   margin-top: -10px !important;
-  margin: 5px;
+
+ 
+  
 }
 
 #cart{ 

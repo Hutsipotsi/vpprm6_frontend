@@ -57,7 +57,7 @@ if (finished === false) {
       </Form>
   )
 }else {
-  return (<h3><p>Tervetuloa {userName}!</p></h3>);
+  return (<h3><p>Tervetuloa</p>{userName}!</h3>);
 
 }
 }

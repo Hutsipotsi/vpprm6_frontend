@@ -31,9 +31,17 @@ export default function Navbar({ url, cart, userName }) {
   function loggedIn(logged) {
     if (logged) {
       return (
+        <>
         <Link className="nav-link" id="icon" to="/logout">
           {userName} (Kirjaudu ulos)
-        </Link>);
+        </Link>
+        <Link className="nav-link" id="icon" to="/manageproducts">
+          Tuote
+        </Link>
+        <Link  className="nav-link" id="icon" to="/managecategories">
+          Kategoria
+        </Link>
+        </>);
     }
     else {
       return (
@@ -43,7 +51,7 @@ export default function Navbar({ url, cart, userName }) {
           </Link>
           <Link className="nav-link" id="icon" to="/register">
             Rekisteröidy
-          </Link>
+            </Link>
         </>);
     }
   }
@@ -105,18 +113,6 @@ export default function Navbar({ url, cart, userName }) {
                 </li>
               ))}
             </ul>
-          </li>
-          <li className="navbar-nav">
-            <Link
-              className="nav-link"
-              id="managementText"
-              to="/managecategories"
-            >
-              Hallinta
-            </Link>
-            <Link className="nav-link" id="managementText" to="/manageproducts">
-              Tuote
-            </Link>
           </li>
         </ul>
         <ul>
