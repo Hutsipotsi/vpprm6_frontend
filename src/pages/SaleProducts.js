@@ -30,9 +30,8 @@ export default function SaleProducts({ url, addToCart }) {
   return (
     <>
       <h2 className="category">Tarjoukset</h2>
-  
-      
-      <container> 
+
+      <div className="container"> 
       <CardGroup>
         <Row>
           {sales.map((product) => (
@@ -54,7 +53,7 @@ export default function SaleProducts({ url, addToCart }) {
           ))}
         </Row>
         </CardGroup>
-      </container>
+      </div>
     </>
   );
 }
