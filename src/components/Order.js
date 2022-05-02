@@ -67,7 +67,8 @@ export default function Order({ url, cart, removeFromCart, updateAmount, emptyCa
                 <table className="table">
                     <tbody>
                         {cart.map((product, index) => {
-                            sum += parseFloat(product.price) * product.amount;
+                            if(product.discount) sum += parseFloat(product.discount) * product.amount;
+                            else sum += parseFloat(product.price) * product.amount;
                             return (
                                 <tr key={uuid()}>
                                     <td>{product.name}</td>
