@@ -64,7 +64,7 @@ export default function Home({ url, addToCart }) {
       </Carousel>
       <>
         <h3 id="saleText">Viikon tarjoukset</h3>
-        <container>
+        <div className="container">
           <CardGroup>
             <Row>
               {sales.slice(0, 4).map((product) => (
@@ -102,7 +102,7 @@ export default function Home({ url, addToCart }) {
               ))}
             </Row>
           </CardGroup>
-        </container>
+        </div>
       </>
     </div>
   );
