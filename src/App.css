@@ -205,10 +205,19 @@ footer {
 }
 
 #footerIcons a, #footerIcons {
-  margin-top: 10vh;
+  margin-top: 8vh;
   text-decoration: none;
   color: var(--text-dark) !important;
   margin-left: 20px;  
+}
+
+#footerText {
+  margin-right: auto;
+  padding: 5px;
+  
+}
+#footerHeader {
+  font-weight: bold;
 }
 
 #text {
