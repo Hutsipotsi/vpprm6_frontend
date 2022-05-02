@@ -30,8 +30,9 @@ export default function Home({ url, addToCart }) {
       <Carousel variant="dark" prevLabel={false} nextLabel={false}>
         <Carousel.Item>
           <img
+
             className="d-block w-100"
-            img src={require("../images/backpack.png")}
+            src={require("../images/backpack.png")}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -42,7 +43,7 @@ export default function Home({ url, addToCart }) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            img src={require("../images/disc-golf.jpg")}
+            src={require("../images/disc-golf.jpg")}
             alt="Second slide"
           />
           <Carousel.Caption>
@@ -53,7 +54,7 @@ export default function Home({ url, addToCart }) {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            img src={require("../images/innova_star_boss.jpg")}
+            src={require("../images/innova_star_boss.jpg")}
             alt="Third slide"
           />
           <Carousel.Caption>
@@ -64,7 +65,7 @@ export default function Home({ url, addToCart }) {
       </Carousel>
       <>
         <h3 id="saleText">Viikon tarjoukset</h3>
-        <container>
+      
           <CardGroup>
             <Row>
               {sales.slice(0, 4).map((product) => (
@@ -102,7 +103,7 @@ export default function Home({ url, addToCart }) {
               ))}
             </Row>
           </CardGroup>
-        </container>
+      
       </>
     </div>
   );

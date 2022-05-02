@@ -27,7 +27,7 @@ export default function Navbar({ url, cart, userName }) {
       navigate("/search/" + search);
     }
   }
-
+  
   function loggedIn(logged) {
     if (logged) {
       return (
@@ -119,9 +119,7 @@ export default function Navbar({ url, cart, userName }) {
           <li className="navbar-nav">
             {userName !== '' ? loggedIn(true) : loggedIn(false)}
             <i className="navba-nav" id="icon">
-              <li className="nav-item">
-                <Cart cart={cart} />
-              </li>
+              <Cart cart={cart} />
             </i>
           </li>
           <form className="form-inline my-2 my-lg-0">
