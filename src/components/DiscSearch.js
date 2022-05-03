@@ -25,7 +25,7 @@ export default function DiscSearch({ show }) {
             values = startValue - endValue + 1;
         }
 
-        options.push(<option key={i} value="">{name}</option>);
+        options.push(<option key={i} value="null">{name}</option>);
         for(i = 1; i <= values; i++, startValue += step) {
             options.push(<option key={i} value={startValue}>{startValue}</option>);
         }
@@ -53,7 +53,7 @@ export default function DiscSearch({ show }) {
                 + "/" + glide +
                 "/" + turn +
                 "/" + fade}>Hae</Link>
-                <button className="btn btn-warning" onClick={() => resetOptions()}>Tyhjennä</button>
+                {/* <Link type="submit" className="btn btn-warning" to="/products/null/null/null/null">Tyhjennä</Link> */}
             </form>
         );
     }
