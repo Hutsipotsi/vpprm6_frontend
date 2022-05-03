@@ -27,23 +27,23 @@ export default function Navbar({ url, cart, userName }) {
       navigate("/search/" + search);
     }
   }
-  
+
   function loggedIn(logged) {
     if (logged) {
       return (
         <>
-        <Link className="nav-link" id="icon" to="/logout">
-          {userName} (Kirjaudu ulos)
-        </Link>
-        <Link className="nav-link" id="icon" to="/manageproducts">
-          Tuote
-        </Link>
-        <Link  className="nav-link" id="icon" to="/managecategories">
-          Kategoria
-        </Link>
-        </>);
-    }
-    else {
+          <Link className="nav-link" id="icon" to="/logout">
+            {userName} (Kirjaudu ulos)
+          </Link>
+          <Link className="nav-link" id="icon" to="/manageproducts">
+            Tuote
+          </Link>
+          <Link className="nav-link" id="icon" to="/managecategories">
+            Kategoria
+          </Link>
+        </>
+      );
+    } else {
       return (
         <>
           <Link className="nav-link" id="icon" to="/login">
@@ -51,8 +51,9 @@ export default function Navbar({ url, cart, userName }) {
           </Link>
           <Link className="nav-link" id="icon" to="/register">
             Rekisteröidy
-            </Link>
-        </>);
+          </Link>
+        </>
+      );
     }
   }
 
@@ -63,8 +64,8 @@ export default function Navbar({ url, cart, userName }) {
           src={require("../images/KK_Logo.jpg")}
           width="100"
           height="100"
-          className="d-inline-block align-top">
-        </img>
+          className="d-inline-block align-top"
+        ></img>
       </div>
       <Link className="navbar-brand" id="text" to="/">
         Kiekkokulma
@@ -84,9 +85,9 @@ export default function Navbar({ url, cart, userName }) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <a className="nav-link" id="text" href="/sale">
+            <Link className="nav-link" id="text" to="/sale">
               Tarjoukset
-            </a>
+            </Link>
           </li>
           <li className="nav-item dropdown">
             <a
@@ -117,7 +118,7 @@ export default function Navbar({ url, cart, userName }) {
         </ul>
         <ul>
           <li className="navbar-nav">
-            {userName !== '' ? loggedIn(true) : loggedIn(false)}
+            {userName !== "" ? loggedIn(true) : loggedIn(false)}
             <i className="navba-nav" id="icon">
               <Cart cart={cart} />
             </i>
