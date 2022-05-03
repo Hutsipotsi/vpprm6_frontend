@@ -76,6 +76,7 @@ export default function Products({ url, addToCart }) {
       <h2 className="category">{categoryName}</h2>
 
       <DiscSearch show={showDiscSearch} />
+      <div className="container">
         <CardGroup>
           <Row>
             {products.map((product) => (
@@ -95,6 +96,7 @@ export default function Products({ url, addToCart }) {
             ))}
           </Row>
         </CardGroup>
+        </div>
     </>
   );
 }
