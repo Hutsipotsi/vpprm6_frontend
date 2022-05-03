@@ -25,12 +25,11 @@ export default function Products({ url, addToCart }) {
       address = url + 'products/searchproducts.php/' + params.searchPhrase;
     }
     else {
-      address = url + "products/getdiscs.php/?nopeus=" + params.nopeus +
-        "&liito=" + params.liito +
-        "&vakaus=" + params.vakaus +
-        "&feidi=" + params.feidi;
+      address = url + "products/getdiscs.php/?speed=" + params.speed +
+        "&glide=" + params.glide +
+        "&turn=" + params.turn +
+        "&fade=" + params.fade;
     }
-
 
     axios.get(address)
       .then((response) => {

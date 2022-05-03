@@ -8,7 +8,6 @@ import { Col, Row } from "react-bootstrap";
 
 export default function SaleProducts({ url, addToCart }) {
   const [sales, setSales] = useState([]);
-  const [products, setProducts] = useState([]);
 
 
   useEffect(() => {
@@ -18,7 +17,6 @@ export default function SaleProducts({ url, addToCart }) {
         const json = response.data;
         if(json) {
           setSales(json.sales);
-          setProducts(json.product);
         }
       })
       .catch((error) => {

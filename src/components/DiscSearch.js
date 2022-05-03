@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function DiscSearch({ show }) {
-    const [nopeus, setNopeus] = useState(null);
-    const [liito, setLiito] = useState(null);
-    const [vakaus, setVakaus] = useState(null);
-    const [feidi, setFeidi] = useState(null);
+    const [speed, setSpeed] = useState(null);
+    const [glide, setGlide] = useState(null);
+    const [turn, setTurn] = useState(null);
+    const [fade, setFade] = useState(null);
 
     function resetOptions() {
-        setNopeus(null);
-        setLiito(null);
-        setVakaus(null);
-        setFeidi(null);
+        setSpeed(null);
+        setGlide(null);
+        setTurn(null);
+        setFade(null);
     }
 
     function dropdownOptions(name, startValue, endValue) {
@@ -36,23 +36,23 @@ export default function DiscSearch({ show }) {
     function renderSearch() {    
         return (
             <form>
-                <select className="properties" name="nopeus" id="nopeus" onChange={ e => setNopeus(e.target.value) }>
+                <select className="properties" name="speed" id="speed" onChange={ e => setSpeed(e.target.value) }>
                     {dropdownOptions("Nopeus", 1, 15)}
                 </select>
-                <select className="properties" name="liito" id="liito" onChange={ e => setLiito(e.target.value) }>
+                <select className="properties" name="glide" id="glide" onChange={ e => setGlide(e.target.value) }>
                     {dropdownOptions("Liito", 1, 6)}
                 </select>
-                <select className="properties" name="vakaus" id="vakaus" onChange={ e => setVakaus(e.target.value) }>
+                <select className="properties" name="turn" id="turn" onChange={ e => setTurn(e.target.value) }>
                     {dropdownOptions("Vakaus", 1, -5)}
                 </select>
-                <select className="properties" name="feidi" id="feidi" onChange={ e => setFeidi(e.target.value) }>
+                <select className="properties" name="fade" id="fade" onChange={ e => setFade(e.target.value) }>
                     {dropdownOptions("Feidi", 0, 5)}
                 </select>
                 <Link className="btn btn-warning"
-                to={"/products/" + nopeus
-                + "/" + liito +
-                "/" + vakaus +
-                "/" + feidi}>Hae</Link>
+                to={"/products/" + speed
+                + "/" + glide +
+                "/" + turn +
+                "/" + fade}>Hae</Link>
                 <button className="btn btn-warning" onClick={() => resetOptions()}>Tyhjennä</button>
             </form>
         );
