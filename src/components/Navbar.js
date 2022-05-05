@@ -131,7 +131,7 @@ export default function Navbar({ url, cart, userName }) {
               className="form-control mr-sm-2"
               id="searchbar"
               type="search"
-              placeholder="Search"
+              placeholder="Hae"
               aria-label="Search"
             />
           </form>
